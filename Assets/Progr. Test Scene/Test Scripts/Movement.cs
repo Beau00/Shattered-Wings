@@ -10,13 +10,9 @@ public class Movement : MonoBehaviour
     public Vector3 move;
     public float moveSpeed;
     public Vector3 jump;
-    public Vector3 mouserotation;
     public int maxJump;
     public int timesJumped;
     public bool running = false;
-
-
-
 
     void Update()
     {
