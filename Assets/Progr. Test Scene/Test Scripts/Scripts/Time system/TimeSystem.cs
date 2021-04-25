@@ -4,15 +4,40 @@ using UnityEngine;
 
 public class TimeSystem : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Material night;
+    public Material day;
+    public Material sunUp;
+    public Material sunDown;
+   
     void Start()
     {
-        
+        RenderSettings.skybox = day;
     }
 
-    // Update is called once per frame
     void Update()
     {
         
     }
+
+    public void Night()
+    {
+        RenderSettings.skybox = night;
+    }
+
+    public void Day()
+    {
+        RenderSettings.skybox = day;
+    }
+
+    public void SunUp()
+    {
+        RenderSettings.skybox = sunUp;
+    }
+
+    public void SunDown()
+    {
+        RenderSettings.skybox = sunDown;
+    }
+
+
 }
