@@ -498,3 +498,4 @@ Received Import Request.
 Start importing Assets/Progr. Test Scene/Progr. Test Scene/Scripts/Flower System/FlowerSystem.cs using Guid(e4e0b8decff34d84f8fcf9c149170157) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db15ef0a5d4990a84b571f119cf698d5') in 0.004783 seconds
   Import took 0.008319 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
