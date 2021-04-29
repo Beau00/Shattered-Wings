@@ -426,3 +426,75 @@ Received Import Request.
 Start importing Assets/Progr. Test Scene/Progr. Test Scene/LightMapping using Guid(25c0e908863bb3545a8cee363705e75e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8659bc2a6aa5b46a9eb313968336a660') in 0.008861 seconds
   Import took 0.012651 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 60.690678 seconds.
+  path: Assets/Progr. Test Scene/Progr. Test Scene/Scripts/Flower System
+  artifactKey: Guid(da7ca4e3a8ebcff4b9dd8176e515a3f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Progr. Test Scene/Progr. Test Scene/Scripts/Flower System using Guid(da7ca4e3a8ebcff4b9dd8176e515a3f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88235196aa565baedb26eb984a8ac2eb') in 0.005654 seconds
+  Import took 0.009577 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.027639 seconds.
+  path: Assets/Progr. Test Scene/Progr. Test Scene/Scripts/Flower System/FlowerSystem.cs
+  artifactKey: Guid(e4e0b8decff34d84f8fcf9c149170157) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Progr. Test Scene/Progr. Test Scene/Scripts/Flower System/FlowerSystem.cs using Guid(e4e0b8decff34d84f8fcf9c149170157) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5ad1acfa62fb4dfd25651b2a430ab67') in 0.018261 seconds
+  Import took 0.024741 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001811 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.47 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.229 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.78 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2461 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.2 MB.
+System memory in use after: 118.4 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3116.
+Total: 2.499600 ms (FindLiveObjects: 0.280300 ms CreateObjectMapping: 0.122800 ms MarkObjects: 2.077600 ms  DeleteObjects: 0.017900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001295 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.872 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.44 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2461 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.3 MB.
+System memory in use after: 118.5 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3119.
+Total: 2.194100 ms (FindLiveObjects: 0.263900 ms CreateObjectMapping: 0.115400 ms MarkObjects: 1.797000 ms  DeleteObjects: 0.017000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1311.374529 seconds.
+  path: Assets/Progr. Test Scene/Progr. Test Scene/Scripts/Flower System/FlowerSystem.cs
+  artifactKey: Guid(e4e0b8decff34d84f8fcf9c149170157) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Progr. Test Scene/Progr. Test Scene/Scripts/Flower System/FlowerSystem.cs using Guid(e4e0b8decff34d84f8fcf9c149170157) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db15ef0a5d4990a84b571f119cf698d5') in 0.004783 seconds
+  Import took 0.008319 seconds .
+
