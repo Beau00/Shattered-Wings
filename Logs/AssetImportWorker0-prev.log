@@ -15,11 +15,11 @@ C:/Users/amyvo/Documents/GitHub/Project-Dark-Fantasy
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-53534
+63005
 Successfully changed project path to: C:/Users/amyvo/Documents/GitHub/Project-Dark-Fantasy
 C:/Users/amyvo/Documents/GitHub/Project-Dark-Fantasy
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 49.18 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 44.59 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.3f1 (76626098c1c4)
 [Subsystems] Discovering subsystems at path D:/Unity/2020.3.3f1/Editor/Data/Resources/UnitySubsystems
@@ -36,194 +36,106 @@ Initialize mono
 Mono path[0] = 'D:/Unity/2020.3.3f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Unity/2020.3.3f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'D:/Unity/2020.3.3f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56440
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56372
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Unity/2020.3.3f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001215 seconds.
+Registered in 0.000952 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 54.94 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 58.18 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.660 seconds
+- Completed reload, in  1.595 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001873 seconds.
+Registered in 0.002042 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 54.49 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 43.96 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.257 seconds
+- Completed reload, in  0.963 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 0.46 ms, found 0 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.39 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2572 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 119.9 MB.
-System memory in use after: 120.1 MB.
+System memory in use before: 120.2 MB.
+System memory in use after: 120.4 MB.
 
 Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3016.
-Total: 2.469300 ms (FindLiveObjects: 0.286900 ms CreateObjectMapping: 0.149800 ms MarkObjects: 1.960100 ms  DeleteObjects: 0.071600 ms)
+Total: 2.347600 ms (FindLiveObjects: 0.364500 ms CreateObjectMapping: 0.234000 ms MarkObjects: 1.677800 ms  DeleteObjects: 0.070400 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Progr. Test Scene/Fantasy Skybox FREE/Materials/FS013/FS013_Night_Moonless.png
-  artifactKey: Guid(a81552b25f3b36b43b82a6c5daf6e098) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Progr. Test Scene/Fantasy Skybox FREE/Materials/FS013/FS013_Night_Moonless.png using Guid(a81552b25f3b36b43b82a6c5daf6e098) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb313100c473622a6185efd74e6285ab') in 0.141166 seconds
-  Import took 0.145763 seconds .
+  path: Assets/URP stuff/Scripts/SimpleCameraController.cs
+  artifactKey: Guid(be76e5f14cfee674cb30b491fb72b09b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/URP stuff/Scripts/SimpleCameraController.cs using Guid(be76e5f14cfee674cb30b491fb72b09b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1aeaed26762553b280bf70e7cbf225f7') in 0.043705 seconds
+  Import took 0.049867 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 43.887609 seconds.
-  path: Assets/Progr. Test Scene/Fantasy Skybox FREE/Scenes/Brush_Flower.png
-  artifactKey: Guid(0d383f0cd0395064eb4b64619b2840f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Progr. Test Scene/Fantasy Skybox FREE/Scenes/Brush_Flower.png using Guid(0d383f0cd0395064eb4b64619b2840f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ea9ddd34e6fb9d35c65c0e659adf1be') in 0.034068 seconds
-  Import took 0.039607 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000208 seconds.
-  path: Assets/Progr. Test Scene/Fantasy Skybox FREE/Scenes/Texture_Dirt_Normal.png
-  artifactKey: Guid(6372a4abc4700ef4aad94d04602e89bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Progr. Test Scene/Fantasy Skybox FREE/Scenes/Texture_Dirt_Normal.png using Guid(6372a4abc4700ef4aad94d04602e89bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1421876ae280e6ec4d86fcb003d78bca') in 0.056258 seconds
-  Import took 0.061925 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000365 seconds.
-  path: Assets/Progr. Test Scene/Fantasy Skybox FREE/Scenes/Texture_Grass_Normal.png
-  artifactKey: Guid(69e10fcec9984ba4f839a5693383c57e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Progr. Test Scene/Fantasy Skybox FREE/Scenes/Texture_Grass_Normal.png using Guid(69e10fcec9984ba4f839a5693383c57e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78bf2db3775f405e3f0deef87a4b8079') in 0.022335 seconds
-  Import took 0.026981 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000203 seconds.
-  path: Assets/Progr. Test Scene/Fantasy Skybox FREE/Scenes/Texture_Grass_Diffuse.png
-  artifactKey: Guid(5e1acf362611957488060eee4178b3f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Progr. Test Scene/Fantasy Skybox FREE/Scenes/Texture_Grass_Diffuse.png using Guid(5e1acf362611957488060eee4178b3f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb63c80e5429e94df59c7ea4b16bcaf4') in 0.022925 seconds
-  Import took 0.027148 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000241 seconds.
-  path: Assets/Progr. Test Scene/Fantasy Skybox FREE/Scenes/Texture_Rock_Diffuse.png
-  artifactKey: Guid(5749f76eaefd4464d864cb20ae8451aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Progr. Test Scene/Fantasy Skybox FREE/Scenes/Texture_Rock_Diffuse.png using Guid(5749f76eaefd4464d864cb20ae8451aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4913bdd52d171e868cb9b149be461e5') in 0.026423 seconds
-  Import took 0.031734 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000245 seconds.
-  path: Assets/Progr. Test Scene/Fantasy Skybox FREE/Scenes/Brush_Grass_02.png
-  artifactKey: Guid(5d4b367f0702b4b46a16ba3b67281419) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Progr. Test Scene/Fantasy Skybox FREE/Scenes/Brush_Grass_02.png using Guid(5d4b367f0702b4b46a16ba3b67281419) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72ca988dce81e7efd53bb934d7ab3891') in 0.023691 seconds
-  Import took 0.030285 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000288 seconds.
-  path: Assets/Progr. Test Scene/Fantasy Skybox FREE/Scenes/TerrainRock.terrainlayer
-  artifactKey: Guid(ca948470117be2143a600fa882a2b77a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Progr. Test Scene/Fantasy Skybox FREE/Scenes/TerrainRock.terrainlayer using Guid(ca948470117be2143a600fa882a2b77a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4eb3637e05d48adfa8105caf3dce140f') in 0.070395 seconds
-  Import took 0.076056 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000195 seconds.
-  path: Assets/Progr. Test Scene/Fantasy Skybox FREE/Scenes/SampleTerrain.asset
-  artifactKey: Guid(053158c74390f9e4eb2fbfb90564a82e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Progr. Test Scene/Fantasy Skybox FREE/Scenes/SampleTerrain.asset using Guid(053158c74390f9e4eb2fbfb90564a82e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c2f9466244a97f2973907a990a2ad53') in 0.190115 seconds
-  Import took 0.196650 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000275 seconds.
-  path: Assets/Progr. Test Scene/Fantasy Skybox FREE/Scenes/TerrainDirt.terrainlayer
-  artifactKey: Guid(d62e27a62f70e074eba77bbd9259e732) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Progr. Test Scene/Fantasy Skybox FREE/Scenes/TerrainDirt.terrainlayer using Guid(d62e27a62f70e074eba77bbd9259e732) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17e361af2fd031af3e0630daa56647d5') in 0.033804 seconds
-  Import took 0.039153 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000235 seconds.
-  path: Assets/Progr. Test Scene/Fantasy Skybox FREE/Scenes/Brush_Grass_01.png
-  artifactKey: Guid(e3970f24555e12a46b75cdf5140ff23e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Progr. Test Scene/Fantasy Skybox FREE/Scenes/Brush_Grass_01.png using Guid(e3970f24555e12a46b75cdf5140ff23e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb26e13e17e5d0da2782d2f46c6956cb') in 0.014657 seconds
-  Import took 0.021170 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000256 seconds.
-  path: Assets/Progr. Test Scene/Fantasy Skybox FREE/Scenes/Texure_Rock_Normal.png
-  artifactKey: Guid(758b1fc63752a1e44957111d5af9b00c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Progr. Test Scene/Fantasy Skybox FREE/Scenes/Texure_Rock_Normal.png using Guid(758b1fc63752a1e44957111d5af9b00c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06adcc01bfa618da68be388e6379e69f') in 0.015582 seconds
-  Import took 0.021645 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000269 seconds.
-  path: Assets/Progr. Test Scene/Fantasy Skybox FREE/Scenes/TerrainGrass.terrainlayer
-  artifactKey: Guid(adb6478a7f24de14eb356d6dc3d0c502) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Progr. Test Scene/Fantasy Skybox FREE/Scenes/TerrainGrass.terrainlayer using Guid(adb6478a7f24de14eb356d6dc3d0c502) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '053cbdf3cabb2b75de3a2ba5abffd7a8') in 0.022739 seconds
-  Import took 0.027883 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000325 seconds.
-  path: Assets/Progr. Test Scene/Fantasy Skybox FREE/Scenes/Texture_Dirt_Diffuse.png
-  artifactKey: Guid(37d1938c74868484ea08b34225eb73b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Progr. Test Scene/Fantasy Skybox FREE/Scenes/Texture_Dirt_Diffuse.png using Guid(37d1938c74868484ea08b34225eb73b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7e2bf959a9f10e76324659e77dd6038') in 0.013895 seconds
-  Import took 0.020094 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.791532 seconds.
-  path: Assets/Progr. Test Scene/Fantasy Skybox FREE/Materials/Classic/Materials
-  artifactKey: Guid(7a42ce3ce04c844448ea6e1626f1e738) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Progr. Test Scene/Fantasy Skybox FREE/Materials/Classic/Materials using Guid(7a42ce3ce04c844448ea6e1626f1e738) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6148c405bf875937295a8458aa3af365') in 0.014171 seconds
-  Import took 0.019580 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.055324 seconds.
-  path: Assets/Progr. Test Scene/Fantasy Skybox FREE/Materials/Classic/Materials/FS000_Night_03.mat
-  artifactKey: Guid(dc4cb31aaf8297b4c997b8fe2564fc2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Progr. Test Scene/Fantasy Skybox FREE/Materials/Classic/Materials/FS000_Night_03.mat using Guid(dc4cb31aaf8297b4c997b8fe2564fc2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05ee2640793ecc2aaf240f6bd81704f4') in 0.299449 seconds
-  Import took 0.303570 seconds .
+  Time since last request: 0.000246 seconds.
+  path: Assets/URP stuff/Scripts
+  artifactKey: Guid(02a3527b6b33a924e8ec66aa805ea717) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/URP stuff/Scripts using Guid(02a3527b6b33a924e8ec66aa805ea717) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd1420df01c25c328f6afaa5d0518ebf') in 0.006685 seconds
+  Import took 0.010547 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002192 seconds.
+Registered in 0.001241 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.46 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.43 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.100 seconds
+- Completed reload, in  0.906 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.45 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.39 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2467 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 120.1 MB.
-System memory in use after: 120.3 MB.
+Unloading 2461 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 113.1 MB.
+System memory in use after: 113.4 MB.
 
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3111.
-Total: 3.020400 ms (FindLiveObjects: 0.517200 ms CreateObjectMapping: 0.200100 ms MarkObjects: 2.282300 ms  DeleteObjects: 0.019500 ms)
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3019.
+Total: 2.104800 ms (FindLiveObjects: 0.275700 ms CreateObjectMapping: 0.120000 ms MarkObjects: 1.687200 ms  DeleteObjects: 0.020600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001311 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.891 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2461 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 113.2 MB.
+System memory in use after: 113.4 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3022.
+Total: 4.112000 ms (FindLiveObjects: 0.400300 ms CreateObjectMapping: 0.224900 ms MarkObjects: 3.453300 ms  DeleteObjects: 0.031600 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
