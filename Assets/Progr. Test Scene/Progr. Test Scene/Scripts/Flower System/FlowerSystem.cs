@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FlowerSystem : MonoBehaviour
 {
+    public Animator animations;
     public GameObject flowerOne;
     public GameObject flowerTwo;
     public GameObject flowerThree;
@@ -25,7 +26,10 @@ public class FlowerSystem : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
 
-        if(collision.gameObject)
+        if (collision.gameObject)
+        {
+
+        }
         /* if bunca has collision with one of the flowers
          * play pickup animation, delete flower, instantiate in mouth of bunca
          * OP VOLGORDE
