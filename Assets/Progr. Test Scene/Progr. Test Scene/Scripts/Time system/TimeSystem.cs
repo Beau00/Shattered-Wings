@@ -19,27 +19,27 @@ public class TimeSystem : MonoBehaviour
         
     }
 
-    public IEnumerator Night()
+    public void Night()
     {
-        yield return new WaitForSeconds(2f);
+       
         RenderSettings.skybox = night;
     }
 
-    public IEnumerator Day()
+    public void Day()
     {
-        yield return new WaitForSeconds(2f);
+        
         RenderSettings.skybox = day;
     }
 
-    public IEnumerator SunUp()
+    public void SunUp()
     {
-        yield return new WaitForSeconds(2f);
+       
         RenderSettings.skybox = sunUp;
     }
 
-    public IEnumerator SunDown()
+    public void SunDown()
     {
-        yield return new WaitForSeconds(2f);
+        
         RenderSettings.skybox = sunDown;
     }
 

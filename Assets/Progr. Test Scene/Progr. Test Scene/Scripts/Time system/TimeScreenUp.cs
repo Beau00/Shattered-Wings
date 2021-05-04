@@ -37,18 +37,18 @@ public class TimeScreenUp : MonoBehaviour
     public void Resume()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        timeMenu.SetActive(false);
         timeMenuUI.SetActive(false);
         Time.timeScale = 1f;
         gameIsPaused = false;
-       
     }
     public void Pause()
     {
         timeMenuUI.SetActive(true);
+        timeMenu.SetActive(true);
         Time.timeScale = 0f;
         gameIsPaused = true;
         Cursor.lockState = CursorLockMode.None;
-        
     }
 
   
