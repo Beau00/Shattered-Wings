@@ -6,7 +6,7 @@ public class TimeSystem : MonoBehaviour
 {
     public Material night, day, sunUp, sunDown;
     public Canvas blackOut;
-    public TimeScreenUp screenTime;
+    public Canvas timeScreen;
    
     void Start()
     {
@@ -21,13 +21,19 @@ public class TimeSystem : MonoBehaviour
 
     public void Night()
     {
-       // remove the menu
+        RenderSettings.skybox = night;
+        //timeScreen.enabled = false;
        
+        // remove the menu
+
         // sleeping animation
 
         // wait for seconds       Invoke("SetActive", 5.0f);  Invoke("SetFalse", 5.0f);     where as 5 is the numbers of seconds for the wait of active and non active.
-        blackOut.enabled = true; 
-        RenderSettings.skybox = night;
+        //Invoke("SetActive", 2.0f);
+        //blackOut.enabled = true;
+        //Invoke("SetFalse", 2.0f);
+
+        
         // wait for seconds to delete
 
         //wake up animation and a new day started!
