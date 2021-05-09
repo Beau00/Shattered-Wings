@@ -3936,8 +3936,7 @@ MonoBehaviour:
   timesJumped: 0
   running: 0
   noWalking: 0
-  customRadius: 20
-  customCenter: {x: 0, y: 0, z: 0}
+  flowerChecker: 0
 --- !u!65 &1977204145
 BoxCollider:
   m_ObjectHideFlags: 0
