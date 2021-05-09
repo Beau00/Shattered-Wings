@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    //movement variables
     public Animator animator;
     public bool canjump = true;
     public float h;
@@ -15,14 +16,17 @@ public class Movement : MonoBehaviour
     public int timesJumped;
     public bool running = false;
     public bool noWalking;
+
+    //flower system variables
+
     void Update()
     {
+        TestFunctionForFlowers(customCenter, customRadius);
+
+
         if (running)
-        {
-            
-            Running();
-            
-            
+        {   
+            Running(); 
         }
         else
         {
@@ -31,7 +35,6 @@ public class Movement : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             Jump();
-
         }
         if (Input.GetButtonDown("Left Shift"))
         {
@@ -41,7 +44,8 @@ public class Movement : MonoBehaviour
         {
             running = false;
         }
-
+        // -----------------------------------------------------------------------------------------------------------------------    Flower System
+        FlowerSystem();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -61,13 +65,11 @@ public class Movement : MonoBehaviour
     public void Running()
     {
         // animator.SetTrigger();   running
-        h = Input.GetAxis("Horizontal");
+        h = Input.GetAxis("Horizontal");     
          v = Input.GetAxis("Vertical");
          move.x = h;
          move.z = v;
          GetComponent<Transform>().Translate(move * Time.deltaTime * moveSpeed * 3f);
-        
-       
     }
 
     public void Walking()
@@ -83,12 +85,60 @@ public class Movement : MonoBehaviour
 
     public void Sleep()
     {
-
         //if(Input.GetButtonDown(sleepbutton))
-
-
-
-
         noWalking = true;
     }
+
+
+    public void FlowerSystem()
+    {
+        //actual function for flower system, for testing
+    }
+
+
+    public float customRadius = 20;
+    public Vector3 customCenter;
+    public GameObject flowerOne;
+   
+
+    public void TestFunctionForFlowers(Vector3 center, float radius)
+    {
+        Collider[] hitColliders = Physics.OverlapSphere(center, radius);
+        customCenter = center;
+        customRadius = radius;
+
+        Debug.Log(radius);
+
+        int i = 0;
+        while (i < hitColliders.Length)
+        {
+            if (hitColliders[i].tag == "F1" || hitColliders[i].tag == flowerOne.transform.tag) // it doesnt return the tag (i think)    de == werkt niet why
+            { // here is F1 flower one, F2 flower 2 etc,
+                Debug.Log(tag);   // untagged?
+                if (Input.GetButtonDown("E"))
+                {
+                    // animator.SetTrigger();      pickup animation
+
+                    Debug.Log("it workey");
+                }            
+            }
+
+            if (hitColliders[i].tag == "F2")
+            {
+
+            }
+            if (hitColliders[i].tag == "F3")
+            {
+
+            } // etc.
+
+                i++;
+             
+        }
+         
+    }
+    
 }
+
+
+

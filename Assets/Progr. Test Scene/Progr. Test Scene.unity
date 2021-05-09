@@ -650,7 +650,7 @@ GameObject:
   - component: {fileID: 417256014}
   - component: {fileID: 417256017}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: Flower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1566,6 +1566,8 @@ MonoBehaviour:
   day: {fileID: 2100000, guid: e11f5b66aad75483b8cd16ee18a0c917, type: 2}
   sunUp: {fileID: 2100000, guid: 023808db2bfa00d44929aa2176d29c76, type: 2}
   sunDown: {fileID: 2100000, guid: d3823126980dd98479f7761e6d47338a, type: 2}
+  blackOut: {fileID: 0}
+  timeScreen: {fileID: 0}
 --- !u!114 &856023385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1875,8 +1877,8 @@ GameObject:
   - component: {fileID: 941881894}
   - component: {fileID: 941881897}
   m_Layer: 0
-  m_Name: Cube
-  m_TagString: Untagged
+  m_Name: Flower One
+  m_TagString: F1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1889,7 +1891,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 941881892}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.34, y: 0, z: -2.9}
+  m_LocalPosition: {x: -4.51, y: 0, z: -9.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1971989753}
@@ -1987,7 +1989,7 @@ GameObject:
   - component: {fileID: 963665790}
   - component: {fileID: 963665793}
   m_Layer: 0
-  m_Name: Cube (3)
+  m_Name: Flower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2194,7 +2196,7 @@ GameObject:
   - component: {fileID: 1022822234}
   - component: {fileID: 1022822237}
   m_Layer: 0
-  m_Name: Cube (4)
+  m_Name: Flower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3757,7 +3759,7 @@ GameObject:
   - component: {fileID: 1953369735}
   - component: {fileID: 1953369738}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: Flower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3934,6 +3936,8 @@ MonoBehaviour:
   timesJumped: 0
   running: 0
   noWalking: 0
+  customRadius: 20
+  customCenter: {x: 0, y: 0, z: 0}
 --- !u!65 &1977204145
 BoxCollider:
   m_ObjectHideFlags: 0
