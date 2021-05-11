@@ -17,15 +17,24 @@ public class Movement : MonoBehaviour
     public bool running = false;
     public bool noWalking;
 
+   
 
     //flower system variables
 
     public bool flowerChecker;
+    public RaycastHit hit;
+    public GameObject flowerOne, flowerTwo, flowerThree, flowerFour, flowerFive;
+    public Rigidbody flowerOneRB, flowerTwoRB, flowerThreeRB, flowerFourRB, flowerFiveRB;
+    public GameObject pickUpPosition;
+    public GameObject puzzleCollider;
+
 
     void Update()
     {
-        //TestFunctionForFlowers(customCenter, customRadius);
-        //flowerChecker = CheckCloseToTag("F1", 1);
+        Vector3 center1 = gameObject.transform.position;
+        float radius1 = 2;
+
+        FlowerSystem(center1, radius1);
 
 
         if (running)
@@ -48,13 +57,18 @@ public class Movement : MonoBehaviour
         {
             running = false;
         }
-        // -----------------------------------------------------------------------------------------------------------------------    Flower System
-       // FlowerSystem();
+      
+      
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision)                                                                      // on collision enter
     {
         timesJumped = 0;
+        
+        if (collision.transform.tag.Equals("Flower"))
+        {
+            Debug.Log("test?");
+        }
     }
 
     public void Jump()
@@ -93,96 +107,114 @@ public class Movement : MonoBehaviour
         noWalking = true;
     }
 
-
-    public void FlowerSystem()
+   
+    void FlowerSystem(Vector3 center, float radius)
     {
-        //actual function for flower system, for testing
-    }
-
-
-
-    //test 2
-    /*
-    bool CheckCloseToTag(string tag, float minimumDistance)
-    {
-        GameObject[] goWithTag = GameObject.FindGameObjectsWithTag(tag);
-        for (int i = 0; i<goWithTag.Length; ++i)
+       
+        Collider[] hitColliders = Physics.OverlapSphere(center, radius);
+        foreach (var hitCollider in hitColliders)
         {
-            if (Vector3.Distance(transform.position, goWithTag[i].transform.position) <= minimumDistance) 
-            return true;
-            Debug.Log("true");
+
+                
+
+            // for all flowers / bones + animation
+
+             if (hitCollider.transform.name == flowerOne.transform.name && Input.GetButtonDown("E"))
+             {
+                 Debug.Log("Flower One Check");
+                    
+
+                 flowerOne.GetComponent<Rigidbody>().useGravity = false;
+                 flowerOne.transform.position = pickUpPosition.transform.position;
+                 flowerOne.transform.parent = GameObject.Find("PickUpPosition").transform;
+                    // flowerOneRB.constraints = RigidbodyConstraints.FreezePosition; // doesnt update. fix
+
+             }
+             if (Input.GetButtonUp("E"))
+             {
+                 flowerOne.transform.parent = null;
+                 flowerOne.GetComponent<Rigidbody>().useGravity = true;
+             }
+
+
+
+            if (hitCollider.transform.name == flowerTwo.transform.name && Input.GetButtonDown("E"))
+            {
+                Debug.Log("Flower Two Check");
+
+
+                flowerTwo.GetComponent<Rigidbody>().useGravity = false;
+                flowerTwo.transform.position = pickUpPosition.transform.position;
+                flowerTwo.transform.parent = GameObject.Find("PickUpPosition").transform;
+                // flowerOneRB.constraints = RigidbodyConstraints.FreezePosition; // doesnt update. fix
+
+            }
+            if (Input.GetButtonUp("E"))
+            {
+                flowerTwo.transform.parent = null;
+                flowerTwo.GetComponent<Rigidbody>().useGravity = true;
+            }
+
+
+            if (hitCollider.transform.name == flowerThree.transform.name && Input.GetButtonDown("E"))
+            {
+                Debug.Log("Flower Two Check");
+
+
+                flowerThree.GetComponent<Rigidbody>().useGravity = false;
+                flowerThree.transform.position = pickUpPosition.transform.position;
+                flowerThree.transform.parent = GameObject.Find("PickUpPosition").transform;
+                // flowerOneRB.constraints = RigidbodyConstraints.FreezePosition; // doesnt update. fix
+
+            }
+            if (Input.GetButtonUp("E"))
+            {
+                flowerThree.transform.parent = null;
+                flowerThree.GetComponent<Rigidbody>().useGravity = true;
+            }
+
+
+            if (hitCollider.transform.name == flowerFour.transform.name && Input.GetButtonDown("E"))
+            {
+                Debug.Log("Flower Two Check");
+
+
+                flowerFour.GetComponent<Rigidbody>().useGravity = false;
+                flowerFour.transform.position = pickUpPosition.transform.position;
+                flowerFour.transform.parent = GameObject.Find("PickUpPosition").transform;
+                // flowerOneRB.constraints = RigidbodyConstraints.FreezePosition; // doesnt update. fix
+
+            }
+            if (Input.GetButtonUp("E"))
+            {
+                flowerFour.transform.parent = null;
+                flowerFour.GetComponent<Rigidbody>().useGravity = true;
+            }
+
+
+            if (hitCollider.transform.name == flowerFive.transform.name && Input.GetButtonDown("E"))
+            {
+                Debug.Log("Flower Two Check");
+
+
+                flowerFive.GetComponent<Rigidbody>().useGravity = false;
+                flowerFive.transform.position = pickUpPosition.transform.position;
+                flowerFive.transform.parent = GameObject.Find("PickUpPosition").transform;
+                // flowerOneRB.constraints = RigidbodyConstraints.FreezePosition; // doesnt update. fix
+
+            }
+            if (Input.GetButtonUp("E"))
+            {
+                flowerFive.transform.parent = null;
+                flowerFive.GetComponent<Rigidbody>().useGravity = true;
+            }
         }
-        Debug.Log("false");
-        return false;
     }
 
-    */
-
-
-
+    
 
 }
 
-
-
-
-
-
-
-
-
-
-    /*
-     * 
-    
-
-
-                                // test 1
-    public float customRadius = 2;
-    public Vector3 customCenter;
-    public GameObject flowerOne;
-   
-
-    public void TestFunctionForFlowers(Vector3 center, float radius)
-    {
-        Collider[] hitColliders = Physics.OverlapSphere(center, radius);
-        customCenter = center;
-        customRadius = radius;
-
-        Debug.Log(radius);
-
-        int i = 0;
-        while (i < hitColliders.Length)
-        {
-            //it checks all instead of the shit in the radius
-            Debug.Log(tag);
-            if (hitColliders[i].transform.tag == "F1" || hitColliders[i].transform.tag == flowerOne.transform.tag) // it doesnt return the tag (i think)    de == werkt niet why
-            { // here is F1 flower one, F2 flower 2 etc,
-
-                Debug.Log(tag);   // untagged?
-                if (Input.GetButtonDown("E"))
-                {
-                    // animator.SetTrigger();      pickup animation
-
-                    Debug.Log("it workey");
-                }            
-            }
-
-            if (hitColliders[i].tag == "F2")
-            {
-
-            }
-            if (hitColliders[i].tag == "F3")
-            {
-
-            } // etc.
-
-                i++;
-             
-        }
-         
-    }
-    */
 
 
 

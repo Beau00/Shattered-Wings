@@ -4,38 +4,37 @@ using UnityEngine;
 
 public class FlowerSystem : MonoBehaviour
 {
-    public Animator animations;
+   // public Animator animations;
     public GameObject flowerOne;
-    public GameObject flowerTwo;
-    public GameObject flowerThree;
-    public GameObject flowerFour;
-    public GameObject flowerFive;
-    public GameObject bunca;
-   
-    void Start()
-    {
-        
-    }
+   // public GameObject flowerTwo;
+   // public GameObject flowerThree;
+    //public GameObject flowerFour;
+    //public GameObject flowerFive;
+    // public GameObject bunca;
+    public GameObject tabletRuinOne;
 
-   
-    void Update()
+    private void Start()
     {
-        
+        tabletRuinOne.SetActive(false);
     }
-
     private void OnCollisionEnter(Collision collision)
     {
-
-        if (collision.gameObject)
+        if(collision.gameObject.name == flowerOne.transform.name)
         {
-
+            Debug.Log("FlowerOne is Placed on Final destination");
+            tabletRuinOne.SetActive(true);
         }
-        /* if bunca has collision with one of the flowers
-         * play pickup animation, delete flower, instantiate in mouth of bunca
-         * OP VOLGORDE
-         * if bunca wants to drop, press a key
-         * play drop animation, instantiate from mouth to make it fall out. 
-         * delete flower in mouth.
-         */
+        if(collision.gameObject.name != flowerOne.transform.name)
+        {
+            tabletRuinOne.SetActive(false);
+        }
+
+
+
     }
 }
+
+
+// 5 colliders, 5 flowers, light bij light, zorgen ervoor dat het mogelijk is! hopelijk. 
+
+
