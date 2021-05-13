@@ -204,194 +204,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b659413919402a4eaa5feb0f95b3f7e, type: 3}
---- !u!1 &46156094
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 46156095}
-  - component: {fileID: 46156098}
-  - component: {fileID: 46156097}
-  - component: {fileID: 46156096}
-  - component: {fileID: 46156099}
-  - component: {fileID: 46156100}
-  - component: {fileID: 46156101}
-  m_Layer: 0
-  m_Name: Camera
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &46156095
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 46156094}
-  m_LocalRotation: {x: 0.0720197, y: 0, z: 0, w: 0.9974032}
-  m_LocalPosition: {x: 0, y: 2.12, z: -3.77}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1977204148}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 8.26, y: 0, z: 0}
---- !u!114 &46156096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 46156094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_RenderShadows: 1
-  m_RequiresDepthTextureOption: 2
-  m_RequiresOpaqueTextureOption: 2
-  m_CameraType: 0
-  m_Cameras: []
-  m_RendererIndex: -1
-  m_VolumeLayerMask:
-    serializedVersion: 2
-    m_Bits: 1
-  m_VolumeTrigger: {fileID: 0}
-  m_RenderPostProcessing: 0
-  m_Antialiasing: 0
-  m_AntialiasingQuality: 2
-  m_StopNaN: 0
-  m_Dithering: 0
-  m_ClearDepth: 1
-  m_AllowXRRendering: 1
-  m_RequiresDepthTexture: 0
-  m_RequiresColorTexture: 0
-  m_Version: 2
---- !u!81 &46156097
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 46156094}
-  m_Enabled: 1
---- !u!20 &46156098
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 46156094}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!114 &46156099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 46156094}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be76e5f14cfee674cb30b491fb72b09b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boost: 3.5
-  positionLerpTime: 0.244
-  mouseSensitivityCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0.5
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.6416626
-      value: 3.11734
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  rotationLerpTime: 0.001
-  invertY: 1
---- !u!114 &46156100
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 46156094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f077aeab8b15a774b9ac806c343fa219, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameIsPaused: 0
-  timeMenu: {fileID: 856023382}
-  timeMenuUI: {fileID: 856023382}
-  fpcam: {fileID: 46156098}
---- !u!114 &46156101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 46156094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2564bfe0d45a9b54b9dc19fec7f20508, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bunca: {fileID: 1977204143}
 --- !u!1 &71698352
 GameObject:
   m_ObjectHideFlags: 0
@@ -654,7 +466,7 @@ GameObject:
   - component: {fileID: 296749740}
   - component: {fileID: 296749744}
   m_Layer: 0
-  m_Name: Ruin1 Dark to Light 1
+  m_Name: collision1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -748,7 +560,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e0b8decff34d84f8fcf9c149170157, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flowerOne: {fileID: 941881892}
   tabletRuinOne: {fileID: 1388918112}
 --- !u!4 &380012860 stripped
 Transform:
@@ -774,7 +585,7 @@ GameObject:
   - component: {fileID: 417256014}
   - component: {fileID: 417256017}
   m_Layer: 0
-  m_Name: FlowerThree
+  m_Name: Flower3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -893,7 +704,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &428170048
 Transform:
   m_ObjectHideFlags: 0
@@ -909,7 +720,7 @@ Transform:
   - {fileID: 185811407}
   - {fileID: 603824794}
   m_Father: {fileID: 1977204148}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &428170049
 MonoBehaviour:
@@ -1299,7 +1110,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 670779772}
-  m_LocalRotation: {x: 0.16018224, y: 0.000000004252742, z: -6.9012535e-10, w: 0.9870875}
+  m_LocalRotation: {x: 0.16018225, y: 0.000000023309845, z: -0.000000003782667, w: 0.9870875}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1587,8 +1398,9 @@ GameObject:
   - component: {fileID: 756656153}
   - component: {fileID: 756656152}
   - component: {fileID: 756656151}
+  - component: {fileID: 756656155}
   m_Layer: 0
-  m_Name: Ruin1 Dark to Light 2
+  m_Name: collision2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1670,6 +1482,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &756656155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 756656150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4e0b8decff34d84f8fcf9c149170157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tabletRuinOne: {fileID: 0}
 --- !u!1 &756876797
 GameObject:
   m_ObjectHideFlags: 0
@@ -1768,7 +1593,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &856023383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2096,7 +1921,7 @@ GameObject:
   - component: {fileID: 941881894}
   - component: {fileID: 941881897}
   m_Layer: 0
-  m_Name: Flower One
+  m_Name: Flower1
   m_TagString: F1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2208,7 +2033,7 @@ GameObject:
   - component: {fileID: 963665790}
   - component: {fileID: 963665793}
   m_Layer: 0
-  m_Name: FlowerFour
+  m_Name: Flower4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2415,7 +2240,7 @@ GameObject:
   - component: {fileID: 1022822234}
   - component: {fileID: 1022822237}
   m_Layer: 0
-  m_Name: FlowerFive
+  m_Name: Flower5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2998,8 +2823,9 @@ GameObject:
   - component: {fileID: 1131517317}
   - component: {fileID: 1131517316}
   - component: {fileID: 1131517315}
+  - component: {fileID: 1131517319}
   m_Layer: 0
-  m_Name: Ruin1 Dark to Light 4
+  m_Name: collision4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3081,6 +2907,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1131517319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131517314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4e0b8decff34d84f8fcf9c149170157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tabletRuinOne: {fileID: 0}
 --- !u!1 &1139652472
 GameObject:
   m_ObjectHideFlags: 0
@@ -3269,8 +3108,9 @@ GameObject:
   - component: {fileID: 1237899832}
   - component: {fileID: 1237899831}
   - component: {fileID: 1237899830}
+  - component: {fileID: 1237899834}
   m_Layer: 0
-  m_Name: Ruin1 Dark to Light 5
+  m_Name: collision5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3352,6 +3192,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1237899834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237899829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4e0b8decff34d84f8fcf9c149170157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tabletRuinOne: {fileID: 0}
 --- !u!1 &1273599196
 GameObject:
   m_ObjectHideFlags: 0
@@ -3724,7 +3577,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1977204148}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1458744668
 GameObject:
@@ -3738,8 +3591,9 @@ GameObject:
   - component: {fileID: 1458744671}
   - component: {fileID: 1458744670}
   - component: {fileID: 1458744669}
+  - component: {fileID: 1458744673}
   m_Layer: 0
-  m_Name: Ruin1 Dark to Light 3
+  m_Name: collision3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3821,6 +3675,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1458744673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458744668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4e0b8decff34d84f8fcf9c149170157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tabletRuinOne: {fileID: 0}
 --- !u!1001 &1483789553
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4147,7 +4014,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &1864075298
 AudioListener:
   m_ObjectHideFlags: 0
@@ -4211,7 +4078,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1977204148}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 20.32, y: 0, z: 0}
 --- !u!114 &1864075301
 MonoBehaviour:
@@ -4388,7 +4255,7 @@ GameObject:
   - component: {fileID: 1953369735}
   - component: {fileID: 1953369738}
   m_Layer: 0
-  m_Name: FlowerTwo
+  m_Name: Flower2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4651,7 +4518,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 46156095}
   - {fileID: 1864075300}
   - {fileID: 428170048}
   - {fileID: 1444984557}
