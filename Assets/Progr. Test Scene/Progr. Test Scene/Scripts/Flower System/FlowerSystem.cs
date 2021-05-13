@@ -8,13 +8,7 @@ public class FlowerSystem : MonoBehaviour
     public static int count = 0;
     bool added = false;
 
-   // public Animator animations;
-    public GameObject flowerOne;
-   // public GameObject flowerTwo;
-   // public GameObject flowerThree;
-    //public GameObject flowerFour;
-    //public GameObject flowerFive;
-    // public GameObject bunca;
+  
     public GameObject tabletRuinOne;
 
     private void Start()
@@ -22,21 +16,7 @@ public class FlowerSystem : MonoBehaviour
         tabletRuinOne.SetActive(false);
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        //if(collision.gameObject.name == flowerOne.transform.name)
-        //{
-        //    Debug.Log("FlowerOne is Placed on Final destination");
-        //    tabletRuinOne.SetActive(true);
-        //}
-        //if(collision.gameObject.name != flowerOne.transform.name)
-        //{
-        //    tabletRuinOne.SetActive(false);
-        //}
 
-        
-
-    }
 
     private void Update()
     {
