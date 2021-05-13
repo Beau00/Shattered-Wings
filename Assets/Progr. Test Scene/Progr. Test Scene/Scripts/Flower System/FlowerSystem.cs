@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class FlowerSystem : MonoBehaviour
 {
+
+    public static int count = 0;
+    bool added = false;
+
    // public Animator animations;
     public GameObject flowerOne;
    // public GameObject flowerTwo;
@@ -17,20 +21,80 @@ public class FlowerSystem : MonoBehaviour
     {
         tabletRuinOne.SetActive(false);
     }
+
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.name == flowerOne.transform.name)
+        //if(collision.gameObject.name == flowerOne.transform.name)
+        //{
+        //    Debug.Log("FlowerOne is Placed on Final destination");
+        //    tabletRuinOne.SetActive(true);
+        //}
+        //if(collision.gameObject.name != flowerOne.transform.name)
+        //{
+        //    tabletRuinOne.SetActive(false);
+        //}
+
+        
+
+    }
+
+    private void Update()
+    {
+        Collider[] colliders = Physics.OverlapSphere(new Vector3(gameObject.transform.position.x, gameObject.transform.position.y+1f, gameObject.transform.position.z), gameObject.transform.localScale.x/2f);
+        bool inThis = false;
+        foreach (Collider collider in colliders)
         {
-            Debug.Log("FlowerOne is Placed on Final destination");
-            tabletRuinOne.SetActive(true);
+            if (gameObject.transform.name == "collision1")
+            {
+                if (collider.name.ToString() == "Flower1")
+                {
+                    inThis = true;
+                }  
+            }
+            else if (gameObject.transform.name == "collision2")
+            {
+                if (collider.name.ToString() == "Flower2")
+                {
+                    inThis = true;
+                }
+            }
+            else if (gameObject.transform.name == "collision3")
+            {
+                if (collider.name.ToString() == "Flower3")
+                {
+                    inThis = true;
+                }
+            }
+            else if (gameObject.transform.name == "collision4")
+            {
+                if (collider.name.ToString() == "Flower4")
+                {
+                    inThis = true;
+                }
+            }
+            else if (gameObject.transform.name == "collision5")
+            {
+                if (collider.name.ToString() == "Flower5")
+                {
+                    inThis = true;
+                }
+            }
         }
-        if(collision.gameObject.name != flowerOne.transform.name)
+
+
+        if (added && !inThis)
         {
-            tabletRuinOne.SetActive(false);
+            count--;
+            added = false;
+        }
+        else if (!added && inThis)
+        {
+            count++;
+            added = true;
         }
 
 
-
+        Debug.Log(count);
     }
 }
 

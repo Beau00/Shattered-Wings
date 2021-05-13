@@ -119,7 +119,7 @@ public class Movement : MonoBehaviour
 
             // for all flowers / bones + animation
 
-             if (hitCollider.transform.name == flowerOne.transform.name && Input.GetButtonDown("E"))
+             if (hitCollider.transform.name.Equals(flowerOne.transform.name) && Input.GetButtonDown("E"))
              {
                  Debug.Log("Flower One Check");
                     
@@ -182,6 +182,7 @@ public class Movement : MonoBehaviour
                 flowerFour.GetComponent<Rigidbody>().useGravity = false;
                 flowerFour.transform.position = pickUpPosition.transform.position;
                 flowerFour.transform.parent = GameObject.Find("PickUpPosition").transform;
+
                 // flowerOneRB.constraints = RigidbodyConstraints.FreezePosition; // doesnt update. fix
 
             }
