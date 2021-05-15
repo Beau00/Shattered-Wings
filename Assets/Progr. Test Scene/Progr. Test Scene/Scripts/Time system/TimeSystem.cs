@@ -33,22 +33,33 @@ public class TimeSystem : MonoBehaviour
 
     public void Night()
     {
+
+
         //blackOut.SetActive(true);
         RenderSettings.skybox = night;
         //timeScreen.enabled = false;
-        flowerOneNight.SetActive(true);
-        flowerTwoNight.SetActive(true);
-        flowerThreeNight.SetActive(true);
-        flowerFourNight.SetActive(true);
-        flowerFiveNight.SetActive(true);
-        Destroy(flowerOne);
-        Destroy(flowerTwo);
-        Destroy(flowerThree);
-        Destroy(flowerFour);
-        Destroy(flowerFive);
-            
-      
+        //flowerOneNight.SetActive(true);
+        //flowerTwoNight.SetActive(true);
+        //flowerThreeNight.SetActive(true);
+        //flowerFourNight.SetActive(true);
+        //flowerFiveNight.SetActive(true);
+        //Destroy(flowerOne);
+        //Destroy(flowerTwo);
+        //Destroy(flowerThree);
+        //Destroy(flowerFour);
+        //Destroy(flowerFive);
         
+        blackOut.SetActive(true);
+        float saveTime = 0f;
+
+        if (blackOut.activeSelf == true)
+        {
+            saveTime += Time.deltaTime;
+        }
+        if (saveTime >= 2)
+        {
+            gameObject.SetActive(false);
+        }
         // wait for seconds       Invoke("SetActive", 5.0f);  Invoke("SetFalse", 5.0f);     where as 5 is the numbers of seconds for the wait of active and non active.
         //Invoke("SetActive", 2.0f);
         //blackOut.enabled = true;
