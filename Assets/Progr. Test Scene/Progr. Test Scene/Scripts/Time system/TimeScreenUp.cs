@@ -9,9 +9,11 @@ public class TimeScreenUp : MonoBehaviour
     public GameObject timeMenu;
     public GameObject timeMenuUI;
     public Camera fpcam;
+    public Canvas blackout;
 
     private void Start()
     {
+        blackout.enabled = false;
         timeMenu.SetActive(false);
 
     }
