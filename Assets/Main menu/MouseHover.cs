@@ -5,23 +5,25 @@ using UnityEngine.UI;
 
 public class MouseHover : MonoBehaviour
 {
-    public GameObject underline;
-
-
+    public Image underline;
+    
     public void Start()
     {
-        underline.SetActive(false);
+        underline.gameObject.SetActive(false);
     }
 
     public void OnMouseEnter()
     {
-        underline.SetActive(true);
+        underline.gameObject.SetActive(true);
     }
+
+
 
     public void OnMouseExit()
     {
-        underline.SetActive(false);
+        underline.gameObject.SetActive(false);
     }
+
 
 
 }
