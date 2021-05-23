@@ -7,10 +7,10 @@ public class PickUp : MonoBehaviour
 
     public bool flowerChecker;
     public RaycastHit hit;
-    public GameObject flowerOne, flowerTwo, flowerThree, flowerFour, flowerFive;
+    public GameObject axe1, axe2, axe3;
     
     public GameObject pickUpPosition;
-    public GameObject puzzleCollider;
+    
 
 
     // Start is called before the first frame update
@@ -29,15 +29,6 @@ public class PickUp : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter(Collision collision)                                                                      
-    {
-    
-
-        if (collision.transform.tag.Equals("Flower"))
-        {
-            Debug.Log("test?");
-        }
-    }
 
   
     // change w tags instead of names.
@@ -53,96 +44,62 @@ public class PickUp : MonoBehaviour
 
             // for all flowers / bones + animation
 
-            if (hitCollider.transform.name.Equals(flowerOne.transform.name) && Input.GetButtonDown("E"))
+            if (hitCollider.transform.name.Equals(axe1.transform.name) && Input.GetButtonDown("E"))
             {
                 Debug.Log("Flower One Check");
 
 
-                flowerOne.GetComponent<Rigidbody>().useGravity = false;
-                flowerOne.transform.position = pickUpPosition.transform.position;
-                flowerOne.transform.parent = GameObject.Find("PickUpPosition").transform;
+                axe1.GetComponent<Rigidbody>().useGravity = false;
+                axe1.transform.position = pickUpPosition.transform.position;
+                axe1.transform.parent = GameObject.Find("PickUpPosition").transform;
                 // flowerOneRB.constraints = RigidbodyConstraints.FreezePosition; // doesnt update. fix
 
             }
             if (Input.GetButtonUp("E"))
             {
-                flowerOne.transform.parent = null;
-                flowerOne.GetComponent<Rigidbody>().useGravity = true;
+                axe1.transform.parent = null;
+                axe1.GetComponent<Rigidbody>().useGravity = true;
             }
 
 
 
-            if (hitCollider.transform.name == flowerTwo.transform.name && Input.GetButtonDown("E"))
+            if (hitCollider.transform.name == axe2.transform.name && Input.GetButtonDown("E"))
             {
                 Debug.Log("Flower Two Check");
 
 
-                flowerTwo.GetComponent<Rigidbody>().useGravity = false;
-                flowerTwo.transform.position = pickUpPosition.transform.position;
-                flowerTwo.transform.parent = GameObject.Find("PickUpPosition").transform;
+                axe2.GetComponent<Rigidbody>().useGravity = false;
+                axe2.transform.position = pickUpPosition.transform.position;
+                axe2.transform.parent = GameObject.Find("PickUpPosition").transform;
                 // flowerOneRB.constraints = RigidbodyConstraints.FreezePosition; // doesnt update. fix
 
             }
             if (Input.GetButtonUp("E"))
             {
-                flowerTwo.transform.parent = null;
-                flowerTwo.GetComponent<Rigidbody>().useGravity = true;
+                axe2.transform.parent = null;
+                axe2.GetComponent<Rigidbody>().useGravity = true;
             }
 
 
-            if (hitCollider.transform.name == flowerThree.transform.name && Input.GetButtonDown("E"))
+            if (hitCollider.transform.name == axe3.transform.name && Input.GetButtonDown("E"))
             {
                 Debug.Log("Flower Two Check");
 
 
-                flowerThree.GetComponent<Rigidbody>().useGravity = false;
-                flowerThree.transform.position = pickUpPosition.transform.position;
-                flowerThree.transform.parent = GameObject.Find("PickUpPosition").transform;
+                axe3.GetComponent<Rigidbody>().useGravity = false;
+                axe3.transform.position = pickUpPosition.transform.position;
+                axe3.transform.parent = GameObject.Find("PickUpPosition").transform;
                 // flowerOneRB.constraints = RigidbodyConstraints.FreezePosition; // doesnt update. fix
 
             }
             if (Input.GetButtonUp("E"))
             {
-                flowerThree.transform.parent = null;
-                flowerThree.GetComponent<Rigidbody>().useGravity = true;
+                axe3.transform.parent = null;
+                axe3.GetComponent<Rigidbody>().useGravity = true;
             }
 
 
-            if (hitCollider.transform.name == flowerFour.transform.name && Input.GetButtonDown("E"))
-            {
-                Debug.Log("Flower Two Check");
-
-
-                flowerFour.GetComponent<Rigidbody>().useGravity = false;
-                flowerFour.transform.position = pickUpPosition.transform.position;
-                flowerFour.transform.parent = GameObject.Find("PickUpPosition").transform;
-
-                // flowerOneRB.constraints = RigidbodyConstraints.FreezePosition; // doesnt update. fix
-
-            }
-            if (Input.GetButtonUp("E"))
-            {
-                flowerFour.transform.parent = null;
-                flowerFour.GetComponent<Rigidbody>().useGravity = true;
-            }
-
-
-            if (hitCollider.transform.name == flowerFive.transform.name && Input.GetButtonDown("E"))
-            {
-                Debug.Log("Flower Two Check");
-
-
-                flowerFive.GetComponent<Rigidbody>().useGravity = false;
-                flowerFive.transform.position = pickUpPosition.transform.position;
-                flowerFive.transform.parent = GameObject.Find("PickUpPosition").transform;
-                // flowerOneRB.constraints = RigidbodyConstraints.FreezePosition; // doesnt update. fix
-
-            }
-            if (Input.GetButtonUp("E"))
-            {
-                flowerFive.transform.parent = null;
-                flowerFive.GetComponent<Rigidbody>().useGravity = true;
-            }
+            
         }
     }
 
