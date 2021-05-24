@@ -25,7 +25,7 @@ public class AxeSystem : MonoBehaviour
         bool inThis = false;
         foreach (Collider collider in colliders)
         {
-            if (gameObject.transform.name == "collision1")
+            if (gameObject.transform.name.ToString() == "collision1")
             {
                 Debug.Log("collsion one works.");
                 if (collider.transform.name.ToString() == "AxeHeadOne")
@@ -35,7 +35,7 @@ public class AxeSystem : MonoBehaviour
                     axeHead1.transform.position = axeHeadPositionOne.position;
                 }
             }
-            else if (gameObject.transform.name == "collision2")
+            else if (gameObject.transform.name.ToString() == "collision2")
             {
                 Debug.Log("collsion two works.");
                 if (collider.transform.name.ToString() == "AxeHeadTwo")
@@ -45,7 +45,7 @@ public class AxeSystem : MonoBehaviour
                     axeHead2.transform.position = axeHeadPositionTwo.position;
                 }
             }
-            else if (gameObject.transform.name == "collision3")
+            else if (gameObject.transform.name.ToString() == "collision3")
             {
                 Debug.Log("collsion three works.");
                 if (collider.transform.name.ToString() == "AxeHandle")
@@ -60,12 +60,15 @@ public class AxeSystem : MonoBehaviour
 
         if (axeHead1.transform.position == axeHeadPositionOne.position && axeHead2.transform.position == axeHeadPositionTwo.position && axeHandle.transform.position == axeHandlePosition.position)
         {
+            // this doesnt work bc it doesnt stay on position 
+            //axeHead1.SetActive(false);
+            //axeHead2.SetActive(false);
+            //axeHandle.SetActive(false);
 
-            axeHead1.SetActive(false);
-            axeHead2.SetActive(false);
-            axeHandle.SetActive(false);
+            // some type of particle system to make the 3 pieces in 1 
             // effect explosion ofzo zodat het smoother eruit ziet en dat niemand het door heeft dat het gedelete word en instantiate hehe 
             fullAxe.SetActive(true);
+            // energy shader aan
         }
 
         if (added && !inThis)
