@@ -25,8 +25,7 @@ public class AxeSystem : MonoBehaviour
         bool inThis = false;
         foreach (Collider collider in colliders)
         {
-            if (gameObject.transform.name.ToString() == "collision1")
-            {
+          
                 Debug.Log("collsion one works.");
                 if (collider.transform.name.ToString() == "AxeHeadOne")
                 {
@@ -34,27 +33,23 @@ public class AxeSystem : MonoBehaviour
                     inThis = true;
                     axeHead1.transform.position = axeHeadPositionOne.position;
                 }
-            }
-            else if (gameObject.transform.name.ToString() == "collision2")
-            {
-                Debug.Log("collsion two works.");
+            
+           
                 if (collider.transform.name.ToString() == "AxeHeadTwo")
                 {
                     Debug.Log("axe head two on position");
                     inThis = true;
                     axeHead2.transform.position = axeHeadPositionTwo.position;
                 }
-            }
-            else if (gameObject.transform.name.ToString() == "collision3")
-            {
-                Debug.Log("collsion three works.");
+            
+             Debug.Log("collsion three works.");
                 if (collider.transform.name.ToString() == "AxeHandle")
                 {
                     Debug.Log("axe handle on position");
                     inThis = true;
                     axeHandle.transform.position = axeHandlePosition.position;
                 }
-            }
+            
 
         }
 
