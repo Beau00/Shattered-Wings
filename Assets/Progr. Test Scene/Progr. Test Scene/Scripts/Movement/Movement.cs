@@ -21,13 +21,9 @@ public class Movement : MonoBehaviour
 
     //flower system variables
 
-    public bool flowerChecker;
+  
     public RaycastHit hit;
-    public GameObject flowerOne, flowerTwo, flowerThree, flowerFour, flowerFive;
-    public Rigidbody flowerOneRB, flowerTwoRB, flowerThreeRB, flowerFourRB, flowerFiveRB;
-    public GameObject pickUpPosition;
-    public GameObject puzzleCollider;
-
+ 
 
     void Update()
     {
