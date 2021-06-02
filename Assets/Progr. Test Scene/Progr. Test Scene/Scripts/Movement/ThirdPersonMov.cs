@@ -59,7 +59,7 @@ public class ThirdPersonMov : MonoBehaviour
             Debug.Log("HE WALKIN");
             //walk
             Move(1.8f);
-            
+            buncaAnimator.SetFloat("Speed", 0.5f, 0.1f, Time.deltaTime);
         }
 
         playerController.Move(new Vector3(0,-1f*Time.deltaTime,0));
@@ -84,7 +84,7 @@ public class ThirdPersonMov : MonoBehaviour
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             playerController.Move(moveDir.normalized * speed * Time.deltaTime);
 
-            buncaAnimator.SetFloat("Speed", 0.5f, 0.1f, Time.deltaTime);
+            
         }
 
 

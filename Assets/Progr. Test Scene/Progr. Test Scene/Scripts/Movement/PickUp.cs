@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class PickUp : MonoBehaviour
 {
-
-    public bool flowerChecker;
-    public RaycastHit hit;
-    public GameObject axe1, axe2, axe3;
+    public List<GameObject> items = new List<GameObject>();
     
+    public RaycastHit hit;
+    private GameObject heldItem;
+    public bool helditembool;
     public GameObject pickUpPosition;
+
+    public float delay;
     
 
 
@@ -25,36 +27,53 @@ public class PickUp : MonoBehaviour
         Vector3 center1 = gameObject.transform.position;
         float radius1 = 2;
 
-        FlowerSystem(center1, radius1);
+        Pickup(center1, radius1);
+        heldItem.transform.position = pickUpPosition.transform.position;
+        heldItem.transform.rotation = gameObject.transform.rotation;
 
+        foreach (GameObject obj in items)
+        {
+            if (!obj.Equals(heldItem))
+            {
+                obj.GetComponent<Rigidbody>().useGravity = true;
+            }
+        }
     }
 
 
   
     // change w tags instead of names.
    
-    void FlowerSystem(Vector3 center, float radius)
+    void Pickup(Vector3 center, float radius)
     {
 
         Collider[] hitColliders = Physics.OverlapSphere(center, radius);
         foreach (var hitCollider in hitColliders)
         {
 
-            if (hitCollider.transform.tag.Equals("item") && Input.GetButtonDown("E"))
+            if (hitCollider.transform.tag.Equals("Item") && Input.GetButtonDown("E") && !helditembool && Time.time - delay > 0.5f)
             {
-                Debug.Log("Flower One Check");
+                if (!items.Contains(hitCollider.gameObject))
+                {
+                    items.Add(hitCollider.gameObject);
+                }
+                helditembool = true;
+                heldItem = hitCollider.gameObject;
+                //heldItem.GetComponent<Rigidbody>().useGravity = false;
+                heldItem.transform.position = pickUpPosition.transform.position;
+                delay = Time.time;
 
-                axe1.GetComponent<Rigidbody>().useGravity = false;
-                axe1.transform.position = pickUpPosition.transform.position;
-                axe1.transform.parent = GameObject.Find("PickUpPosition").transform;
                 // flowerOneRB.constraints = RigidbodyConstraints.FreezePosition; // doesnt update. fix
             }
-            if (Input.GetButtonUp("E"))
+            if (Input.GetButtonDown("E") && helditembool && Time.time - delay > 0.5f)
             {
-                axe1.transform.parent = null;
-                axe1.GetComponent<Rigidbody>().useGravity = true;
+                helditembool = false;
+                heldItem = null;
+                
+                heldItem.GetComponent<Rigidbody>().useGravity = true;
+                delay = Time.time;
             }
-            
+
         }
     }
 
