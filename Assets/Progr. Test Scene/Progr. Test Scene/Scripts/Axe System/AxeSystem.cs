@@ -76,7 +76,7 @@ public class AxeSystem : MonoBehaviour
             count++;
             added = true;
         }
-        Debug.Log(count);
+       
 
 
     }
