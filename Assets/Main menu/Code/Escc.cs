@@ -18,12 +18,13 @@ public class Escc : MonoBehaviour
             if (gameIsPaused == false)
             {
                 gameIsPaused = true;
-                 pauseCanvas.SetActive(true);
-
+                pauseCanvas.SetActive(true);
+                Time.timeScale = 0f;
             }else
             {
                 gameIsPaused = false;
                 pauseCanvas.SetActive(false);
+                Time.timeScale = 1f;
             }
             
         }
