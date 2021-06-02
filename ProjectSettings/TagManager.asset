@@ -8,6 +8,7 @@ TagManager:
   - AxeHeadOne
   - AxeHeadTwo
   - AxeHandle
+  - Item
   layers:
   - Default
   - TransparentFX

@@ -860,6 +860,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AxeHeadOne
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c8a77540549229b468ebcbb3e1338c62, type: 3}
+      propertyPath: m_TagString
+      value: Item
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8a77540549229b468ebcbb3e1338c62, type: 3}
 --- !u!1 &382259298
@@ -1367,7 +1371,7 @@ Rigidbody:
   m_GameObject: {fileID: 534139230}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 2
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -2364,6 +2368,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AxeHeadTwo
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 728faeff2b036e8498273ac7984b8e52, type: 3}
+      propertyPath: m_TagString
+      value: Item
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 728faeff2b036e8498273ac7984b8e52, type: 3}
 --- !u!1 &974565073
@@ -2780,7 +2788,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerController: {fileID: 1196838104}
-  speed: 9
   cam: {fileID: 1864075300}
   turnSmoothTime: 0.1
 --- !u!143 &1196838104
@@ -2801,6 +2808,22 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.24, z: 0}
+--- !u!114 &1196838105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196838102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01f1f19ef64aecb46b0ac5f633d7d559, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items: []
+  helditembool: 0
+  pickUpPosition: {fileID: 1568435583}
+  delay: 0
 --- !u!4 &1196838106 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 29d07a27c5fac13418109b89d8772cf7, type: 3}
@@ -3571,6 +3594,36 @@ Transform:
   m_Father: {fileID: 147963375}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1568435583
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1568435584}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1568435584
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568435583}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.326, z: 0.766}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_Children: []
+  m_Father: {fileID: 1196838106}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1605820790 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6dd515579a1e70f4d8e7f10c9fa3be33, type: 3}
@@ -3954,7 +4007,7 @@ Rigidbody:
   m_GameObject: {fileID: 1891195826}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 2
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -4046,6 +4099,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Full Axe
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6dd515579a1e70f4d8e7f10c9fa3be33, type: 3}
+      propertyPath: m_TagString
+      value: Item
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6dd515579a1e70f4d8e7f10c9fa3be33, type: 3}
 --- !u!1 &1922147894 stripped
@@ -4067,7 +4124,7 @@ Rigidbody:
   m_GameObject: {fileID: 1922147894}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 2
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -4145,6 +4202,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d5a592a7cd1fde34e852309f69950bc6, type: 3}
       propertyPath: m_Name
       value: AxeHandle
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d5a592a7cd1fde34e852309f69950bc6, type: 3}
+      propertyPath: m_TagString
+      value: Item
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5a592a7cd1fde34e852309f69950bc6, type: 3}
@@ -4442,11 +4503,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01f1f19ef64aecb46b0ac5f633d7d559, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flowerChecker: 0
-  axe1: {fileID: 941881892}
-  axe2: {fileID: 1953369733}
-  axe3: {fileID: 417256012}
+  items: []
+  helditembool: 0
   pickUpPosition: {fileID: 1444984556}
+  delay: 0
 --- !u!1 &2072102386
 GameObject:
   m_ObjectHideFlags: 0
