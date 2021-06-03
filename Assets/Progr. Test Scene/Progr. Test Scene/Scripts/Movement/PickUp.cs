@@ -7,19 +7,11 @@ public class PickUp : MonoBehaviour
     public List<GameObject> items = new List<GameObject>();
     
     public RaycastHit hit;
-    private GameObject heldItem;
+    public static GameObject heldItem;
     public bool helditembool;
     public GameObject pickUpPosition;
 
     public float delay;
-    
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -28,8 +20,11 @@ public class PickUp : MonoBehaviour
         float radius1 = 2;
 
         Pickup(center1, radius1);
-        heldItem.transform.position = pickUpPosition.transform.position;
-        heldItem.transform.rotation = gameObject.transform.rotation;
+        if (heldItem != null) 
+        {
+            heldItem.transform.position = pickUpPosition.transform.position;
+            heldItem.transform.rotation = gameObject.transform.rotation;
+        }
 
         foreach (GameObject obj in items)
         {
@@ -42,8 +37,6 @@ public class PickUp : MonoBehaviour
 
 
   
-    // change w tags instead of names.
-   
     void Pickup(Vector3 center, float radius)
     {
 
@@ -68,9 +61,10 @@ public class PickUp : MonoBehaviour
             if (Input.GetButtonDown("E") && helditembool && Time.time - delay > 0.5f)
             {
                 helditembool = false;
+                heldItem.GetComponent<Rigidbody>().useGravity = true;
                 heldItem = null;
                 
-                heldItem.GetComponent<Rigidbody>().useGravity = true;
+                
                 delay = Time.time;
             }
 

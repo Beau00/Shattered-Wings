@@ -15,8 +15,8 @@ public class ThirdPersonMov : MonoBehaviour
     Vector3 moveVector;
     float verticalVelosity;
     private Animator buncaAnimator;
-
-
+    public AnimationCurve curve;
+   
 
     void Start()
     {
@@ -45,7 +45,7 @@ public class ThirdPersonMov : MonoBehaviour
             buncaAnimator.SetFloat("Speed", 0f, 0.1f, Time.deltaTime);
             Move(0f);
         }
-        else if(Input.GetButton("Left Shift") || Input.GetButtonDown("Left Shift"))
+        else if((Input.GetButton("Left Shift") || Input.GetButtonDown("Left Shift")) && PickUp.heldItem == null)
         {
             //run
             Debug.Log("RUN NIBBA");
@@ -89,7 +89,14 @@ public class ThirdPersonMov : MonoBehaviour
 
 
         moveVector = new Vector3(direction.x, verticalVelosity, direction.z);
-        //playerController.Move(moveVector);
+        if(PickUp.heldItem != null)
+        {
+            Vector3 pos = PickUp.heldItem.transform.position;
+            pos = new Vector3(pos.x, pos.y + verticalVelosity, pos.z);
+            PickUp.heldItem.transform.position = pos;
+            //playerController.Move(moveVector);
+        }
+        
 
 
     }

@@ -5,10 +5,11 @@ using UnityEngine;
 public class AxeSystem : MonoBehaviour
 {
     public static int count = 0;
-    bool added = false;
     public GameObject axeHead1, axeHead2, axeHandle;
     public Transform axeHeadPositionOne, axeHeadPositionTwo, axeHandlePosition;
-
+    public bool axeHead1Added = false, axeHead2Added = false, axeHandleAdded = false;
+    
+    public ParticleSystem test;
 
     public GameObject fullAxe;
 
@@ -21,62 +22,71 @@ public class AxeSystem : MonoBehaviour
 
     private void Update()
     {
-        Collider[] colliders = Physics.OverlapSphere(new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 1f, gameObject.transform.position.z), gameObject.transform.localScale.x / 2f);
-        bool inThis = false;
+        Collider[] colliders = Physics.OverlapSphere(new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 1f, gameObject.transform.position.z), 2f);
         foreach (Collider collider in colliders)
         {
           
-                Debug.Log("collsion one works.");
-                if (collider.transform.name.ToString() == "AxeHeadOne")
+                if (collider.transform.name.ToString() == "AxeHeadOne" || axeHead1Added)
                 {
                     Debug.Log("axe head one on position");
-                    inThis = true;
-                    axeHead1.transform.position = axeHeadPositionOne.position;
+                if (axeHead1 != PickUp.heldItem)
+                {
+                    axeHead1.tag = UnityEditorInternal.InternalEditorUtility.tags[0];
+                    axeHead1Added = true;
+                }
                 }
             
            
-                if (collider.transform.name.ToString() == "AxeHeadTwo")
+                if (collider.transform.name.ToString() == "AxeHeadTwo" || axeHead2Added)
                 {
                     Debug.Log("axe head two on position");
-                    inThis = true;
-                    axeHead2.transform.position = axeHeadPositionTwo.position;
+                    if (axeHead2 != PickUp.heldItem)
+                    {
+                    axeHead2.tag = UnityEditorInternal.InternalEditorUtility.tags[0];
+                    axeHead2Added = true;
+                    }
                 }
             
-             Debug.Log("collsion three works.");
-                if (collider.transform.name.ToString() == "AxeHandle")
+                if (collider.transform.name.ToString() == "AxeHandle" || axeHandleAdded)
                 {
                     Debug.Log("axe handle on position");
-                    inThis = true;
-                    axeHandle.transform.position = axeHandlePosition.position;
+                if (axeHandle != PickUp.heldItem)
+                {
+                    axeHandle.tag = UnityEditorInternal.InternalEditorUtility.tags[0];
+                    axeHandleAdded = true;
                 }
+            }
             
 
         }
 
-        if (axeHead1.transform.position == axeHeadPositionOne.position && axeHead2.transform.position == axeHeadPositionTwo.position && axeHandle.transform.position == axeHandlePosition.position)
-        {
-            // this doesnt work bc it doesnt stay on position 
-            //axeHead1.SetActive(false);
-            //axeHead2.SetActive(false);
-            //axeHandle.SetActive(false);
-
-            // some type of particle system to make the 3 pieces in 1 
-            // effect explosion ofzo zodat het smoother eruit ziet en dat niemand het door heeft dat het gedelete word en instantiate hehe 
+        if (axeHead1Added && axeHead2Added && axeHandleAdded)
+        { 
             fullAxe.SetActive(true);
-            // energy shader aan
+            axeHandle.SetActive(false);
+            axeHead1.SetActive(false);
+            axeHead2.SetActive(false);
         }
 
-        if (added && !inThis)
+        if (axeHead1Added)
         {
-            count--;
-            added = false;
+            axeHead1.transform.position = axeHeadPositionOne.position;
+            axeHead1.transform.rotation = axeHeadPositionOne.rotation;
         }
-        else if (!added && inThis)
+
+
+        if (axeHead2Added)
         {
-            count++;
-            added = true;
+            axeHead2.transform.position = axeHeadPositionTwo.position;
+            axeHead2.transform.rotation = axeHeadPositionTwo.rotation;
         }
-       
+
+        if (axeHandleAdded)
+        {
+            axeHandle.transform.position = axeHandlePosition.position;
+            axeHandle.transform.rotation = axeHeadPositionOne.rotation;
+        }
+
 
 
     }
