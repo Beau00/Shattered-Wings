@@ -1812,11 +1812,11 @@ PrefabInstance:
     - target: {fileID: -2905602171366747513, guid: 29d07a27c5fac13418109b89d8772cf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 90534eb8487a7dd43931c2a1644404e4, type: 2}
+      objectReference: {fileID: 2100000, guid: afda8b57e3fd86249871d79ca7b3e01b, type: 2}
     - target: {fileID: -2905602171366747513, guid: 29d07a27c5fac13418109b89d8772cf7, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 90534eb8487a7dd43931c2a1644404e4, type: 2}
+      objectReference: {fileID: 2100000, guid: e821efd5cbd1c3a49811e3650facb8e1, type: 2}
     - target: {fileID: 919132149155446097, guid: 29d07a27c5fac13418109b89d8772cf7, type: 3}
       propertyPath: m_Name
       value: Bunca SW Animation Walk Run Idle
