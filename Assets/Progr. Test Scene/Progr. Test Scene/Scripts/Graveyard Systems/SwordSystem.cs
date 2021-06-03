@@ -4,48 +4,78 @@ using UnityEngine;
 
 public class SwordSystem : MonoBehaviour
 {
-    //this script will be on the grave only
+    public static int count = 0;
+    public GameObject sword1, sword2;
+    public Transform swordPos1, swordPos2;
+    public bool swordAdded = false, swordtwoAdded = false;
+    public GameObject graveRoof;
+    public ParticleSystem test;
 
-    public GameObject grave;
-    public GameObject swordOne, swordTwo;
-    public Transform swordOnePlacement, swordTwoPlacement;
+    public GameObject skull;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        skull.SetActive(false);
     }
 
-    private void OnCollisionEnter(Collision collision)
+
+
+    private void Update()
     {
-       
-        if(collision.transform.name == swordOne.transform.name)
+        Collider[] colliders = Physics.OverlapSphere(new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), 1f);
+        foreach (Collider collider in colliders)
         {
-            swordOne.transform.position = swordOnePlacement.position;
-            // freeze sword position
-            swordOne.transform.parent = swordOnePlacement;
-            swordOne.GetComponent<Rigidbody>().useGravity = false;
-            swordOne.GetComponent<Rigidbody>().velocity = Vector3.zero;
-            swordOne.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
-        }
-        
-        if (collision.transform.name == swordTwo.transform.name)
-        {
-            swordTwo.transform.position = swordTwoPlacement.position;
-            // freeze sword position
-            swordTwo.transform.parent = swordTwoPlacement;
-            swordTwo.GetComponent<Rigidbody>().useGravity = false;
-            swordTwo.GetComponent<Rigidbody>().velocity = Vector3.zero;
-            swordTwo.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+
+            if (collider.transform.name.ToString() == "sword1" || swordAdded)
+            {
+                Debug.Log("sword1");
+                if (sword1 != PickUp.heldItem)
+                {
+                    sword1.tag = UnityEditorInternal.InternalEditorUtility.tags[0];
+                    swordAdded = true;
+                }
+            }
+
+
+            if (collider.transform.name.ToString() == "sword2" || swordtwoAdded)
+            {
+                Debug.Log("sword2");
+                if (sword2 != PickUp.heldItem)
+                {
+                    sword2.tag = UnityEditorInternal.InternalEditorUtility.tags[0];
+                    swordtwoAdded = true;
+                }
+            }
+
+          
+
 
         }
-       
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
+        if (swordAdded && swordtwoAdded )
+        {
+            skull.SetActive(true);
+            graveRoof.transform.rotation = Quaternion.Euler(0, 45, 0) ;
+           
+        }
+
+        if (swordAdded)
+        {
+            sword1.transform.position = swordPos1.position;
+            sword1.transform.rotation = swordPos1.rotation;
+        }
+
+
+        if (swordtwoAdded)
+        {
+            sword2.transform.position = swordPos2.position;
+            sword2.transform.rotation = swordPos2.rotation;
+        }
+
         
+
+
+
     }
 }
+
