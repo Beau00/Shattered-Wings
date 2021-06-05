@@ -40,7 +40,7 @@ public class ThirdPersonMov : MonoBehaviour
 
         if (moveVector.x.Equals(Vector3.zero.x) && moveVector.z.Equals(Vector3.zero.z))
         {
-            Debug.Log("NO NIBBA");
+           
             //idle
             buncaAnimator.SetFloat("Speed", 0f, 0.1f, Time.deltaTime);
             Move(0f);
@@ -48,7 +48,7 @@ public class ThirdPersonMov : MonoBehaviour
         else if((Input.GetButton("Left Shift") || Input.GetButtonDown("Left Shift")) && PickUp.heldItem == null)
         {
             //run
-            Debug.Log("RUN NIBBA");
+            
             Move(9f);
 
             buncaAnimator.SetFloat("Speed", 1f, 0.1f, Time.deltaTime);
@@ -56,7 +56,7 @@ public class ThirdPersonMov : MonoBehaviour
         }
         else
         {
-            Debug.Log("HE WALKIN");
+           
             //walk
             Move(1.8f);
             buncaAnimator.SetFloat("Speed", 0.5f, 0.1f, Time.deltaTime);

@@ -29,11 +29,11 @@ public class AxeSystem : MonoBehaviour
                 if (collider.transform.name.ToString() == "AxeHeadOne" || axeHead1Added)
                 {
                     Debug.Log("axe head one on position");
-                if (axeHead1 != PickUp.heldItem)
-                {
-                    axeHead1.tag = UnityEditorInternal.InternalEditorUtility.tags[0];
-                    axeHead1Added = true;
-                }
+                    if (axeHead1 != PickUp.heldItem)
+                    {
+                        axeHead1.tag = UnityEditorInternal.InternalEditorUtility.tags[0];
+                        axeHead1Added = true;
+                    }
                 }
             
            
@@ -42,19 +42,19 @@ public class AxeSystem : MonoBehaviour
                     Debug.Log("axe head two on position");
                     if (axeHead2 != PickUp.heldItem)
                     {
-                    axeHead2.tag = UnityEditorInternal.InternalEditorUtility.tags[0];
-                    axeHead2Added = true;
+                        axeHead2.tag = UnityEditorInternal.InternalEditorUtility.tags[0];
+                        axeHead2Added = true;
                     }
                 }
             
                 if (collider.transform.name.ToString() == "AxeHandle" || axeHandleAdded)
                 {
                     Debug.Log("axe handle on position");
-                if (axeHandle != PickUp.heldItem)
-                {
-                    axeHandle.tag = UnityEditorInternal.InternalEditorUtility.tags[0];
-                    axeHandleAdded = true;
-                }
+                    if (axeHandle != PickUp.heldItem)
+                    {
+                        axeHandle.tag = UnityEditorInternal.InternalEditorUtility.tags[0];
+                        axeHandleAdded = true;
+                    }
             }
             
 
