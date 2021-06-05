@@ -88,26 +88,26 @@ public class SoundPuzzle : MonoBehaviour
 
         if (smolldoorOpenOne)
         {
-            smollDoorOne.transform.Rotate(new Vector3(xOne, 0, 0));
+            smollDoorOne.transform.Rotate(new Vector3(0, xOne, 0));
             
         }
         if (smolldoorOpenTwo)
         {
-            smollDoorTwo.transform.Rotate(new Vector3(xTwo, 0, 0));
+            smollDoorTwo.transform.Rotate(new Vector3(0, xTwo, 0));
             
         }
         if (smolldoorOpenThree)
         {
             
-            if (smollDoorThree.transform.rotation != new Quaternion(40f,0,0,1.0f))
-            {
-                smollDoorThree.transform.Rotate(new Vector3(xThree, 0, 0) );
-            }
+            //if (smollDoorThree.transform.rotation != new Quaternion(40f,0,0,1.0f))
+           // {
+                smollDoorThree.transform.Rotate(new Vector3(0, xThree, 0) );
+            //}
            
         }
         if (smolldoorOpenFour)
         {
-            smollDoorFour.transform.Rotate(new Vector3(xThree, 0, 0) );
+            smollDoorFour.transform.Rotate(new Vector3(0, xFour, 0) );
             
           
         }
