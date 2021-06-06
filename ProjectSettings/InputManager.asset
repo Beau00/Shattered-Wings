@@ -534,13 +534,13 @@ InputManager:
     axis: 5
     joyNum: 0
   - serializedVersion: 3
-    m_Name: E
-    descriptiveName: E
+    m_Name: F
+    descriptiveName: F
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: e
+    positiveButton: f
     altNegativeButton: 
-    altPositiveButton: e
+    altPositiveButton: f
     gravity: 1000
     dead: 0.001
     sensitivity: 1000

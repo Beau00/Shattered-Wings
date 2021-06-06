@@ -5,17 +5,18 @@ using UnityEngine;
 public class SoundPuzzle : MonoBehaviour
 {
     public AudioSource lower, low, high, higher;
-
+    public Animator doors;
     public GameObject smollDoorOne, smollDoorTwo, smollDoorThree, smollDoorFour;
-    public bool smolldoorOpenOne, smolldoorOpenTwo, smolldoorOpenThree, smolldoorOpenFour;
+    public bool smolldoorOpenOne = false, smolldoorOpenTwo = false, smolldoorOpenThree = false, smolldoorOpenFour = false;
+    
     public float doorRotation;
     public GameObject trofeeSoundPuzzle;
 
     public GameObject player;
-    public bool playerCheck1 = false, playerCheck2 = false, playerCheck3 = false, playerCheck4 = false;
-
-    public float xOne = 10, xTwo = 10, xThree = 10, xFour = 10;
+    public float delay;
     
+    // animation add && main item systemm
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,13 +36,18 @@ public class SoundPuzzle : MonoBehaviour
         Collider[] collidersOne = Physics.OverlapSphere(smollDoorOne.transform.position, 1f);
         foreach (Collider collider1 in collidersOne)
         {
-            
-            if (collider1.transform.name == player.transform.name && Input.GetButtonDown("E"))
+
+            if (collider1.transform.name == player.transform.name && Input.GetButtonDown("E") && Time.time - delay > 0.5f)
             {
-                Debug.Log("you have entered the radius of door 1");
-                
-                lower.PlayDelayed(1);
+                lower.PlayDelayed(0.5f);
                 smolldoorOpenOne = true;
+                delay = Time.time;
+            }
+            else if(smolldoorOpenOne = true && Input.GetButtonDown("F") && Time.time - delay > 0.5f)
+            {
+                lower.Stop();
+                smolldoorOpenOne = false;
+                delay = Time.time;
             }
         }
 
@@ -49,12 +55,17 @@ public class SoundPuzzle : MonoBehaviour
         foreach (Collider collider2 in collidersTwo)
         {
            
-            if (collider2.transform.name == player.transform.name && Input.GetButtonDown("E"))
+            if (collider2.transform.name == player.transform.name && Input.GetButtonDown("E") && Time.time - delay > 0.5f)
             {
-                Debug.Log("you have entered the radius of door 2");
-                
-                low.PlayDelayed(1);
+                low.PlayDelayed(0.5f);
                 smolldoorOpenTwo = true;
+                delay = Time.time;
+            }
+            else if(smolldoorOpenTwo = true && Input.GetButtonDown("F") && Time.time - delay > 0.5f)
+            {
+                low.Stop();
+                smolldoorOpenTwo = false;
+                delay = Time.time;
             }
         }
 
@@ -62,12 +73,17 @@ public class SoundPuzzle : MonoBehaviour
         foreach (Collider collider3 in collidersThree )
         {
           
-            if (collider3.transform.name == player.transform.name && Input.GetButtonDown("E"))
+            if (collider3.transform.name == player.transform.name && Input.GetButtonDown("E") && Time.time - delay > 0.5f)
             {
-                Debug.Log("you have entered the radius of door 3");
-                
-                high.PlayDelayed(1);
+                high.PlayDelayed(0.5f);
                 smolldoorOpenThree = true;
+                delay = Time.time;
+            }
+            else if(smolldoorOpenThree = true && Input.GetButtonDown("F") && Time.time - delay > 0.5f)
+            {
+                high.Stop();
+                smolldoorOpenThree = false;
+                delay = Time.time;
             }
         }
 
@@ -75,43 +91,21 @@ public class SoundPuzzle : MonoBehaviour
         foreach (Collider collider4 in collidersFour)
         {
             
-            if (collider4.transform.name == player.transform.name && Input.GetButtonDown("E"))
+            if (collider4.transform.name == player.transform.name && Input.GetButtonDown("E") && Time.time - delay > 0.5f)
             {
-                Debug.Log("you have entered the radius of door 4");
-                
-                higher.PlayDelayed(1);
+                higher.PlayDelayed(0.5f);
                 smolldoorOpenFour = true;
+                delay = Time.time;
+            }
+            else if(smolldoorOpenFour = true && Input.GetButtonDown("F") && Time.time - delay > 0.5f)
+            {
+                higher.Stop();
+                smolldoorOpenFour = false;
+                delay = Time.time;
             }
         }
 
-    
-
-        if (smolldoorOpenOne)
-        {
-            smollDoorOne.transform.Rotate(new Vector3(0, xOne, 0));
-            
-        }
-        if (smolldoorOpenTwo)
-        {
-            smollDoorTwo.transform.Rotate(new Vector3(0, xTwo, 0));
-            
-        }
-        if (smolldoorOpenThree)
-        {
-            
-            //if (smollDoorThree.transform.rotation != new Quaternion(40f,0,0,1.0f))
-           // {
-                smollDoorThree.transform.Rotate(new Vector3(0, xThree, 0) );
-            //}
-           
-        }
-        if (smolldoorOpenFour)
-        {
-            smollDoorFour.transform.Rotate(new Vector3(0, xFour, 0) );
-            
-          
-        }
-        Debug.Log(smollDoorThree.transform.rotation);
+   
     }
 
   
