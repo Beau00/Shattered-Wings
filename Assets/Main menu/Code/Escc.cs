@@ -6,7 +6,7 @@ public class Escc : MonoBehaviour
 {
     public GameObject pauseCanvas;
     public bool gameIsPaused = false;
-
+    public GameObject setttingCanvas;
 
     // Update is called once per frame
     void Update()
@@ -30,6 +30,8 @@ public class Escc : MonoBehaviour
                 Time.timeScale = 1f;
                 AudioListener.volume = 1;
                 Cursor.lockState = CursorLockMode.Locked;
+                setttingCanvas.SetActive(false);
+
             }
             
         }
