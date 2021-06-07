@@ -20,19 +20,31 @@ public class Escc : MonoBehaviour
                 gameIsPaused = true;
                 pauseCanvas.SetActive(true);
                 Time.timeScale = 0f;
-            }else
+                AudioListener.volume =0;
+                Cursor.lockState = CursorLockMode.None;
+            }
+            else
             {
                 gameIsPaused = false;
                 pauseCanvas.SetActive(false);
                 Time.timeScale = 1f;
+                AudioListener.volume = 1;
+                Cursor.lockState = CursorLockMode.Locked;
             }
             
         }
 
+     
 
-        
-        
-    
+
+
+}
+    public void Gaybutton()
+    {
+        pauseCanvas.SetActive(false);
+        Time.timeScale = 1f;
+        AudioListener.volume = 1;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
 }

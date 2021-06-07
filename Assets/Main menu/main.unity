@@ -2764,8 +2764,6 @@ GameObject:
   - component: {fileID: 586273569}
   - component: {fileID: 586273568}
   - component: {fileID: 586273566}
-  - component: {fileID: 586273567}
-  - component: {fileID: 586273570}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2805,20 +2803,6 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
---- !u!114 &586273567
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 586273565}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 102b75fb1cd9d3c4aa712beaf4b013f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseCanvas: {fileID: 2117732186}
-  gameIsPaused: 0
 --- !u!20 &586273568
 Camera:
   m_ObjectHideFlags: 0
@@ -2876,19 +2860,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &586273570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 586273565}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ecd8889f907aed4c85782ecf91cbed8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pickup: {fileID: 537791179}
 --- !u!1 &599237420
 GameObject:
   m_ObjectHideFlags: 0
