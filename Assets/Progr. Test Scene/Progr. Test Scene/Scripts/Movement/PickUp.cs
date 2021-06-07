@@ -18,14 +18,12 @@ public class PickUp : MonoBehaviour
     {
         Vector3 center1 = gameObject.transform.position;
         float radius1 = 2;
-
         Pickup(center1, radius1);
         if (heldItem != null) 
         {
             heldItem.transform.position = pickUpPosition.transform.position;
             heldItem.transform.rotation = gameObject.transform.rotation;
         }
-
         foreach (GameObject obj in items)
         {
             if (!obj.Equals(heldItem))
@@ -35,15 +33,12 @@ public class PickUp : MonoBehaviour
         }
     }
 
-
-  
     void Pickup(Vector3 center, float radius)
     {
 
         Collider[] hitColliders = Physics.OverlapSphere(center, radius);
         foreach (var hitCollider in hitColliders)
         {
-
             if (hitCollider.transform.tag.Equals("Item") && Input.GetButtonDown("E") && !helditembool && Time.time - delay > 0.5f)
             {
                 if (!items.Contains(hitCollider.gameObject))
@@ -55,16 +50,13 @@ public class PickUp : MonoBehaviour
                 //heldItem.GetComponent<Rigidbody>().useGravity = false;
                 heldItem.transform.position = pickUpPosition.transform.position;
                 delay = Time.time;
-
                 // flowerOneRB.constraints = RigidbodyConstraints.FreezePosition; // doesnt update. fix
             }
             if (Input.GetButtonDown("E") && helditembool && Time.time - delay > 0.5f)
             {
                 helditembool = false;
                 heldItem.GetComponent<Rigidbody>().useGravity = true;
-                heldItem = null;
-                
-                
+                heldItem = null; 
                 delay = Time.time;
             }
 

@@ -18,8 +18,6 @@ public class SwordSystem : MonoBehaviour
         skull.SetActive(false);
     }
 
-
-
     private void Update()
     {
         Collider[] colliders = Physics.OverlapSphere(new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), 1f);
@@ -35,8 +33,6 @@ public class SwordSystem : MonoBehaviour
                     swordAdded = true;
                 }
             }
-
-
             if (collider.transform.name.ToString() == "sword2" || swordtwoAdded)
             {
                 Debug.Log("sword2");
@@ -46,36 +42,23 @@ public class SwordSystem : MonoBehaviour
                     swordtwoAdded = true;
                 }
             }
-
-          
-
-
         }
 
         if (swordAdded && swordtwoAdded )
         {
             skull.SetActive(true);
             graveRoof.transform.rotation = Quaternion.Euler(0, 45, 0) ;
-           
         }
-
         if (swordAdded)
         {
             sword1.transform.position = swordPos1.position;
             sword1.transform.rotation = swordPos1.rotation;
         }
-
-
         if (swordtwoAdded)
         {
             sword2.transform.position = swordPos2.position;
             sword2.transform.rotation = swordPos2.rotation;
         }
-
-        
-
-
-
     }
 }
 
