@@ -41,7 +41,7 @@ public class Escc : MonoBehaviour
 
 
 }
-    public void Gaybutton()
+    public void Resumebutton()
     {
         pauseCanvas.SetActive(false);
         Time.timeScale = 1f;
