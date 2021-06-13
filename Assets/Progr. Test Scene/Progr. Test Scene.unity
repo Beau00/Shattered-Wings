@@ -2839,7 +2839,7 @@ MonoBehaviour:
   low: {fileID: 527103699}
   high: {fileID: 966826592}
   higher: {fileID: 623722499}
-  doors: {fileID: 0}
+  doors: {fileID: 492915110}
   smollDoorOne: {fileID: 1401731227}
   smollDoorTwo: {fileID: 1215699775}
   smollDoorThree: {fileID: 1385160360}
@@ -2866,6 +2866,25 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!95 &492915110
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492915106}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8b2b13982c4607d43ae563ac91856cd1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &527103698
 GameObject:
   m_ObjectHideFlags: 0
@@ -3266,7 +3285,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 36e8bd7f1636e854cb7fc8514608d015, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.423
+      value: -7.657
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 36e8bd7f1636e854cb7fc8514608d015, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3274,7 +3293,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 36e8bd7f1636e854cb7fc8514608d015, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 21.57
+      value: 22.625
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 36e8bd7f1636e854cb7fc8514608d015, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3696,6 +3715,34 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0e2205eb7ba7d0745a1f779cd31f532d, type: 3}
       propertyPath: m_Name
       value: altaar 2 puzzle 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051265923977866434, guid: 0e2205eb7ba7d0745a1f779cd31f532d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.029501535
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051265923977866434, guid: 0e2205eb7ba7d0745a1f779cd31f532d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.6901599
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051265923977866434, guid: 0e2205eb7ba7d0745a1f779cd31f532d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.032137763
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051265923977866434, guid: 0e2205eb7ba7d0745a1f779cd31f532d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7223407
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051265923977866434, guid: 0e2205eb7ba7d0745a1f779cd31f532d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0.327
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051265923977866434, guid: 0e2205eb7ba7d0745a1f779cd31f532d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 87.404
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051265923977866434, guid: 0e2205eb7ba7d0745a1f779cd31f532d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -175.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e2205eb7ba7d0745a1f779cd31f532d, type: 3}

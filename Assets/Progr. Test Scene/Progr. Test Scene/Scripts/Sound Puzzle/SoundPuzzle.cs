@@ -36,14 +36,14 @@ public class SoundPuzzle : MonoBehaviour
                 lower.PlayDelayed(0.5f);
                 smolldoorOpenOne = true;
                 delay = Time.time;
-                doors.SetBool("dooropen1", true);
+                doors.SetBool("door1open", true);
             }
             else if(smolldoorOpenOne = true && Input.GetButtonDown("F"))
             {
                 lower.Stop();
                 smolldoorOpenOne = false;
                 delay = Time.time;
-                doors.SetBool("doorclosed1", true);
+                doors.SetBool("door1close", true);
             }
         }
 
@@ -55,14 +55,14 @@ public class SoundPuzzle : MonoBehaviour
                 low.PlayDelayed(0.5f);
                 smolldoorOpenTwo = true;
                 delay = Time.time;
-                doors.SetBool("dooropen2", true);
+                doors.SetBool("door2open", true);
             }
             else if(smolldoorOpenTwo = true && Input.GetButtonDown("F"))
             {
                 low.Stop();
                 smolldoorOpenTwo = false;
                 delay = Time.time;
-                doors.SetBool("doorclosed2", true);
+                doors.SetBool("door2close", true);
             }
         }
 
@@ -75,14 +75,14 @@ public class SoundPuzzle : MonoBehaviour
                 high.PlayDelayed(0.5f);
                 smolldoorOpenThree = true;
                 delay = Time.time;
-                doors.SetBool("dooropen3", true);
+                doors.SetBool("door3open", true);
             }
             else if(smolldoorOpenThree = true && Input.GetButtonDown("F"))
             {
                 high.Stop();
                 smolldoorOpenThree = false;
                 delay = Time.time;
-                doors.SetBool("doorclosed3", true);
+                doors.SetBool("door3close", true);
             }
         }
 
@@ -95,14 +95,14 @@ public class SoundPuzzle : MonoBehaviour
                 higher.PlayDelayed(0.5f);
                 smolldoorOpenFour = true;
                 delay = Time.time;
-                doors.SetBool("dooropen4", true);
+                doors.SetBool("door4open", true);
             }
             else if(smolldoorOpenFour = true && Input.GetButtonDown("F"))
             {
                 higher.Stop();
                 smolldoorOpenFour = false;
                 delay = Time.time;
-                doors.SetBool("doorclosed4", true);
+                doors.SetBool("door4close", true);
             }
         }
 
