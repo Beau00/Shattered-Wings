@@ -47,10 +47,10 @@ public class PickUp : MonoBehaviour
                 }
                 helditembool = true;
                 heldItem = hitCollider.gameObject;
-                //heldItem.GetComponent<Rigidbody>().useGravity = false;
+                
                 heldItem.transform.position = pickUpPosition.transform.position;
                 delay = Time.time;
-                // flowerOneRB.constraints = RigidbodyConstraints.FreezePosition; // doesnt update. fix
+                
             }
             if (Input.GetButtonDown("E") && helditembool && Time.time - delay > 0.5f)
             {
