@@ -6,6 +6,8 @@ public class SoundPuzzle : MonoBehaviour
 {
     public AudioSource lower, low, high, higher;
     public Animator doors; // door animator;
+    public Animator door1, door2, door3, door4;
+
     public GameObject smollDoorOne, smollDoorTwo, smollDoorThree, smollDoorFour;
     public bool smolldoorOpenOne = false, smolldoorOpenTwo = false, smolldoorOpenThree = false, smolldoorOpenFour = false;
     
@@ -20,6 +22,9 @@ public class SoundPuzzle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        doors.SetBool("door1open", true);
+        doors.SetBool("door2open", true);
+
         lower.Stop();  
         low.Stop();
         high.Stop();   
@@ -43,7 +48,9 @@ public class SoundPuzzle : MonoBehaviour
                 lower.Stop();
                 smolldoorOpenOne = false;
                 delay = Time.time;
+                doors.SetBool("door1open", false);
                 doors.SetBool("door1close", true);
+                
             }
         }
 
@@ -62,6 +69,7 @@ public class SoundPuzzle : MonoBehaviour
                 low.Stop();
                 smolldoorOpenTwo = false;
                 delay = Time.time;
+                doors.SetBool("door2open", false);
                 doors.SetBool("door2close", true);
             }
         }
@@ -82,6 +90,7 @@ public class SoundPuzzle : MonoBehaviour
                 high.Stop();
                 smolldoorOpenThree = false;
                 delay = Time.time;
+                doors.SetBool("door3open", false);
                 doors.SetBool("door3close", true);
             }
         }
@@ -102,6 +111,7 @@ public class SoundPuzzle : MonoBehaviour
                 higher.Stop();
                 smolldoorOpenFour = false;
                 delay = Time.time;
+                doors.SetBool("door4open", false);
                 doors.SetBool("door4close", true);
             }
         }
