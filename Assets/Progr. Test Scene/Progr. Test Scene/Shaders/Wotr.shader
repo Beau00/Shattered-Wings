@@ -28,9 +28,10 @@ Shader "Custom/Wotr"
 		SubShader
 	{
 		Tags{ "Queue" = "Transparent" "RenderType" = "Transparent" }
+		Tags{ "RenderPipeline" = "UniversalPipeline" "Queue" = "Geometry" }
 		LOD 200
 
-		CGPROGRAM
+		  HLSLPROGRAM
 		#pragma surface surf Standard vertex:vert alpha:fade nolightmap
 		#pragma debug
 
@@ -47,7 +48,7 @@ Shader "Custom/Wotr"
 		sampler2D_float _CameraDepthTexture;
 		sampler2D _MainTex;
 
-		fixed4 _Colour;
+		float4 _Colour;
 
 		float _UDepth;
 		float _VDepth;
@@ -58,7 +59,7 @@ Shader "Custom/Wotr"
 		float _UMovement;
 		float _VMovement;
 
-		fixed4 _BlendColour;
+		float4 _BlendColour;
 		float _FadeLimit;
 		float _Softness;
 
@@ -111,7 +112,7 @@ if (rawZ > 0.0)
 if (fade < _FadeLimit)
 	o.Albedo = o.Albedo.rgb * fade + _BlendColour.rgb * (1 - fade);
 	}
-ENDCG
+	ENDHLSL
 	}
 		Fallback "Diffuse"
 }

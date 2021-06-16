@@ -1,5 +1,6 @@
-Shader "Custom/SurfaceOutline"
+Shader "Unlit/UnlitOutline"
 {
+
     Properties{
               _Color("Main Color", Color) = (1,1,1,0.5)
               _Outline("Outline Color", Color) = (0,0,0,1)
@@ -7,17 +8,17 @@ Shader "Custom/SurfaceOutline"
               _Glossiness("Smoothness", Range(0,1)) = 0.5
               _Size("Outline Thickness", Float) = 1.5
     }
-          
+
         SubShader{
 
                 Tags {"RenderType" = "Opaque"}
-                LOD 200
+                LOD 400
 
-               
+
 
                 Pass
                 {
-                    
+
                     Stencil
                     {
                         Ref  1
@@ -28,8 +29,8 @@ Shader "Custom/SurfaceOutline"
                     #include "UnityCG.cginc"
                     #pragma vertex vert                     
                     #pragma fragment frag                   
-                   
-                    
+
+
                     half _Size;
                     half _Outline;
                     half _Color;
@@ -39,7 +40,7 @@ Shader "Custom/SurfaceOutline"
                         float4 pos : SV_POSITION;
                     };
 
-                    v2f vert(appdata_base v) 
+                    v2f vert(appdata_base v)
                     {
                         v2f output;
                         v.vertex.xyz += v.normal * _Size;
@@ -50,8 +51,8 @@ Shader "Custom/SurfaceOutline"
                     float2 frag(v2f i) : SV_Target
                     {
                         return _Outline;
-                    };
-                    
+                    }
+
                         ENDHLSL
                 }
 
@@ -71,11 +72,11 @@ Shader "Custom/SurfaceOutline"
 
                 sampler2D _MainTex;
 
-             
+
 
                 half _Glossiness;
 
-                void surf(Input IN, inout SurfaceOutputStandard output) 
+                void surf(Input IN, inout SurfaceOutputStandard output)
                 {
                     float c = tex2D(_MainTex, IN.uv_MainTex) * _Color;
                     output.Albedo = c.rgb;
@@ -84,13 +85,7 @@ Shader "Custom/SurfaceOutline"
                 }
 
                 ENDHLSL
-        }
-        
-        FallBack "Diffuse"
+              }
+
+                  FallBack "Diffuse"
 }
-        
-                  
-//struct Input
-             //{
-             //    float2 uv_MainTex;
-             //}
