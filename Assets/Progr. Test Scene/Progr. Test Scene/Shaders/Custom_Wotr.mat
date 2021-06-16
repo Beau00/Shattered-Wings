@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SurfaceOutline
-  m_Shader: {fileID: 4800000, guid: c9e07ac10d9187e40b5e1355de9e982f, type: 3}
+  m_Name: Custom_Wotr
+  m_Shader: {fileID: 4800000, guid: fae8ddbf475fa5b4ea2415a70ba3c449, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -20,15 +20,24 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 65e0bf158cfcc4245ac97d1a906e35cf, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8770a9e732813db449a32920ad1febba, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Metallic: 0.272
-    - _OutlineThickness: 0.015
-    - _Smoothness: 0.296
+    - _FadeLimit: 0.3
+    - _Softness: 1
+    - _TimeMultU: 18
+    - _TimeMultV: 18
+    - _UDepth: 18
+    - _UMovement: 2
+    - _UScaler: 0.1
+    - _VDepth: 15
+    - _VMovement: 5
+    - _VScaler: 0.2
+    - _WaveAmp: 0.312
+    - _WaveOffset: 2.62
+    - _WaveSpeed: 5.5
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Emission: {r: 0.0007314645, g: 0, b: 0, a: 1}
-    - _OutlineColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BlendColour: {r: 1, g: 0, b: 0, a: 1}
+    - _Colour: {r: 1, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
