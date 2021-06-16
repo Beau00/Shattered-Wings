@@ -9,6 +9,7 @@ public class SoundPuzzle : MonoBehaviour
     public Transform doorOneCollider, doorTwoCollider, doorThreeCollider, doorFourCollider;
 
     public Animator door1, door2, door3, door4;
+    public Animation d1,d2,d3,d4;
 
     //public GameObject smollDoorOne, smollDoorTwo, smollDoorThree, smollDoorFour;
     public bool smolldoorOpenOne = false, smolldoorOpenTwo = false, smolldoorOpenThree = false, smolldoorOpenFour = false;
@@ -24,7 +25,10 @@ public class SoundPuzzle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        door1.SetBool("C1", true);
+        door2.SetBool("C2", true);
+        door4.SetBool("C3", true);
+        door3.SetBool("C4", true);
 
         lower.Stop();  
         low.Stop();
