@@ -19,7 +19,7 @@ public class ThirdPersonMov : MonoBehaviour
         buncaAnimator = GetComponent<Animator>();
     }
 
-    void Update() // normal movement
+    private void FixedUpdate()
     {
         
         if (isGrounded)
