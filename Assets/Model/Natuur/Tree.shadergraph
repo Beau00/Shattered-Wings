@@ -873,40 +873,40 @@
     "m_DefaultReferenceName": "Gradient_4ccd394ad99a46918ffbd5b228579e38",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
-    "m_Precision": 0,
+    "m_Precision": 1,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
         "serializedVersion": "2",
         "key0": {
-            "r": 0.0,
-            "g": 1.0,
-            "b": 0.8580703735351563,
+            "r": 0.6375970244407654,
+            "g": 0.871367335319519,
+            "b": 0.4396572411060333,
             "a": 1.0
         },
         "key1": {
-            "r": 1.0,
-            "g": 0.0,
-            "b": 0.8960533142089844,
+            "r": 0.4677838385105133,
+            "g": 0.5972020030021668,
+            "b": 0.34191444516181948,
             "a": 1.0
         },
         "key2": {
-            "r": 0.0,
-            "g": 0.0,
-            "b": 0.0,
+            "r": 0.2874408960342407,
+            "g": 0.45641106367111208,
+            "b": 0.3864295184612274,
             "a": 0.0
         },
         "key3": {
-            "r": 0.0,
-            "g": 0.0,
-            "b": 0.0,
+            "r": 0.26225072145462038,
+            "g": 0.25415217876434328,
+            "b": 0.29177069664001467,
             "a": 0.0
         },
         "key4": {
-            "r": 0.0,
-            "g": 0.0,
-            "b": 0.0,
+            "r": 0.2195262312889099,
+            "g": 0.13286836445331574,
+            "b": 0.1946178674697876,
             "a": 0.0
         },
         "key5": {
@@ -927,11 +927,11 @@
             "b": 0.0,
             "a": 0.0
         },
-        "ctime0": 5397,
-        "ctime1": 60524,
-        "ctime2": 0,
-        "ctime3": 0,
-        "ctime4": 0,
+        "ctime0": 13107,
+        "ctime1": 26214,
+        "ctime2": 39321,
+        "ctime3": 52428,
+        "ctime4": 65535,
         "ctime5": 0,
         "ctime6": 0,
         "ctime7": 0,
@@ -943,8 +943,8 @@
         "atime5": 0,
         "atime6": 0,
         "atime7": 0,
-        "m_Mode": 0,
-        "m_NumColorKeys": 2,
+        "m_Mode": 1,
+        "m_NumColorKeys": 5,
         "m_NumAlphaKeys": 2
     }
 }
@@ -2020,10 +2020,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -865.0001831054688,
-            "y": 189.99993896484376,
-            "width": 207.99998474121095,
-            "height": 103.99999237060547
+            "x": -844.0,
+            "y": 268.0,
+            "width": 102.00000762939453,
+            "height": 34.0
         }
     },
     "m_Slots": [
@@ -2032,7 +2032,7 @@
         }
     ],
     "synonyms": [],
-    "m_Precision": 0,
+    "m_Precision": 1,
     "m_PreviewExpanded": true,
     "m_PreviewMode": 0,
     "m_CustomColors": {
@@ -2263,10 +2263,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -1305.2469482421875,
-            "y": 659.7529907226563,
-            "width": 126.0,
-            "height": 77.0
+            "x": -1241.0,
+            "y": 549.0,
+            "width": 143.0,
+            "height": 34.0
         }
     },
     "m_Slots": [
