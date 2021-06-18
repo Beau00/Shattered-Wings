@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2351252429913746453
+--- !u!1 &6370624521424853050
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,45 +8,101 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5086388204985614335}
-  - component: {fileID: 4096533245770589472}
-  - component: {fileID: 4759998579263656537}
+  - component: {fileID: 5990580885095416448}
+  - component: {fileID: 1547213220733072881}
   m_Layer: 0
-  m_Name: Bosje1_LOD1
+  m_Name: Bosje2SW
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5086388204985614335
+--- !u!4 &5990580885095416448
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2351252429913746453}
+  m_GameObject: {fileID: 6370624521424853050}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -127.59956, y: 0.021595433, z: 284.15762}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2268408450017541483}
+  - {fileID: 4205145758407903015}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!205 &1547213220733072881
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6370624521424853050}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: -0.02418518, y: 0.6210468, z: 0.004388571}
+  m_Size: 3.310995
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.25
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 6207047284752896966}
+  - screenRelativeHeight: 0.01
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 6044097303129697638}
+  m_Enabled: 1
+--- !u!1 &6505785232367013576
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4205145758407903015}
+  - component: {fileID: 5764009395859488612}
+  - component: {fileID: 6044097303129697638}
+  m_Layer: 0
+  m_Name: Bosje2_LOD1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4205145758407903015
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6505785232367013576}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.000010835007, y: 0.021576397, z: -0.00029126182}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6581261422991476836}
+  m_Father: {fileID: 5990580885095416448}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &4096533245770589472
+--- !u!33 &5764009395859488612
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2351252429913746453}
-  m_Mesh: {fileID: -484983114075921175, guid: 08b172d0d9033b04485fca39c8a504fb, type: 3}
---- !u!23 &4759998579263656537
+  m_GameObject: {fileID: 6505785232367013576}
+  m_Mesh: {fileID: -2766220327040748810, guid: 6119032882c3b6744b0838ead8cc292f, type: 3}
+--- !u!23 &6044097303129697638
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2351252429913746453}
+  m_GameObject: {fileID: 6505785232367013576}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -82,7 +138,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &5773199973165552350
+--- !u!1 &8794665856125104421
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -90,101 +146,45 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6581261422991476836}
-  - component: {fileID: 2093973494163128085}
+  - component: {fileID: 2268408450017541483}
+  - component: {fileID: 5996864905730157031}
+  - component: {fileID: 6207047284752896966}
   m_Layer: 0
-  m_Name: Bosje1SW
+  m_Name: Bosje2_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6581261422991476836
+--- !u!4 &2268408450017541483
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5773199973165552350}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -134.54538, y: 1.3188748, z: 277.31003}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4910506888621074926}
-  - {fileID: 5086388204985614335}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!205 &2093973494163128085
-LODGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5773199973165552350}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: -0.033189535, y: 0.94917923, z: 0.008360624}
-  m_Size: 4.081815
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
-  m_LastLODIsBillboard: 0
-  m_LODs:
-  - screenRelativeHeight: 0.25
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 5588941782817517898}
-  - screenRelativeHeight: 0.01
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 4759998579263656537}
-  m_Enabled: 1
---- !u!1 &9206534676978439832
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4910506888621074926}
-  - component: {fileID: 5499242602766602414}
-  - component: {fileID: 5588941782817517898}
-  m_Layer: 0
-  m_Name: Bosje1_LOD0
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4910506888621074926
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9206534676978439832}
+  m_GameObject: {fileID: 8794665856125104421}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.000010835007, y: 0.021576397, z: -0.00029126182}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6581261422991476836}
+  m_Father: {fileID: 5990580885095416448}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &5499242602766602414
+--- !u!33 &5996864905730157031
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9206534676978439832}
-  m_Mesh: {fileID: 7834463037359770548, guid: 08b172d0d9033b04485fca39c8a504fb, type: 3}
---- !u!23 &5588941782817517898
+  m_GameObject: {fileID: 8794665856125104421}
+  m_Mesh: {fileID: 8686061112481363514, guid: 6119032882c3b6744b0838ead8cc292f, type: 3}
+--- !u!23 &6207047284752896966
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9206534676978439832}
+  m_GameObject: {fileID: 8794665856125104421}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
