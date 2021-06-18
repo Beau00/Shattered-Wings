@@ -252,7 +252,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9178834856438428593}
-  - component: {fileID: 8365159274347663596}
   m_Layer: 0
   m_Name: StonesSW
   m_TagString: Untagged
@@ -277,24 +276,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!205 &8365159274347663596
-LODGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8370525977352874251}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: 0.6100936, y: 0.26691818, z: -2.9640164}
-  m_Size: 22.519012
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
-  m_LastLODIsBillboard: 0
-  m_LODs:
-  - screenRelativeHeight: 0.018102387
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 285760585873167370}
-    - renderer: {fileID: 3081939538275842629}
-    - renderer: {fileID: 6534022911819170697}
-  m_Enabled: 1
