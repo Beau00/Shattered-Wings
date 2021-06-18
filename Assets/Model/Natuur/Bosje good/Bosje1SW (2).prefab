@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &985284600645620666
+--- !u!1 &4538363170787576740
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,101 +8,45 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 497577060887513344}
-  - component: {fileID: 4665060822578101873}
+  - component: {fileID: 6398676075570616398}
+  - component: {fileID: 2775094414768456337}
+  - component: {fileID: 6653008106145314280}
   m_Layer: 0
-  m_Name: Bosje1SW (1)
+  m_Name: Bosje1_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &497577060887513344
+--- !u!4 &6398676075570616398
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 985284600645620666}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -134.02277, y: 0.018748768, z: 276.1131}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1844072495102617738}
-  - {fileID: 1955849533696097947}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!205 &4665060822578101873
-LODGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 985284600645620666}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: -0.033189535, y: 0.94917923, z: 0.008360624}
-  m_Size: 4.081815
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
-  m_LastLODIsBillboard: 0
-  m_LODs:
-  - screenRelativeHeight: 0.04165123
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 1170092744444211246}
-  - screenRelativeHeight: 0.01
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 2286703447143682877}
-  m_Enabled: 1
---- !u!1 &2483391411763501052
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1844072495102617738}
-  - component: {fileID: 1289109028062876106}
-  - component: {fileID: 1170092744444211246}
-  m_Layer: 0
-  m_Name: Bosje1_LOD0
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1844072495102617738
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2483391411763501052}
+  m_GameObject: {fileID: 4538363170787576740}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.000010835007, y: 0.021576397, z: -0.00029126182}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 497577060887513344}
-  m_RootOrder: 0
+  m_Father: {fileID: 4976341831805153237}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &1289109028062876106
+--- !u!33 &2775094414768456337
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2483391411763501052}
-  m_Mesh: {fileID: 7834463037359770548, guid: 08b172d0d9033b04485fca39c8a504fb, type: 3}
---- !u!23 &1170092744444211246
+  m_GameObject: {fileID: 4538363170787576740}
+  m_Mesh: {fileID: -484983114075921175, guid: 08b172d0d9033b04485fca39c8a504fb, type: 3}
+--- !u!23 &6653008106145314280
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2483391411763501052}
+  m_GameObject: {fileID: 4538363170787576740}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -115,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e3ffd0257ee08d14da432a8be086e372, type: 2}
+  - {fileID: 2100000, guid: 09a38276e04f8924db27838850175217, type: 2}
   - {fileID: 2100000, guid: 818bb4782329eac41ab05526ed1c172d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -138,7 +82,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &9012752298886999409
+--- !u!1 &5639725177691043183
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,45 +90,101 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1955849533696097947}
-  - component: {fileID: 7307977281145480260}
-  - component: {fileID: 2286703447143682877}
+  - component: {fileID: 4976341831805153237}
+  - component: {fileID: 240268780870506660}
   m_Layer: 0
-  m_Name: Bosje1_LOD1
+  m_Name: Bosje1SW (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1955849533696097947
+--- !u!4 &4976341831805153237
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9012752298886999409}
+  m_GameObject: {fileID: 5639725177691043183}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -134.02277, y: 0.018748768, z: 269.86}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 6521015572901400159}
+  - {fileID: 6398676075570616398}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!205 &240268780870506660
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5639725177691043183}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: -0.033189535, y: 0.94917923, z: 0.008360624}
+  m_Size: 4.081815
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.043925565
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 6040798325075547899}
+  - screenRelativeHeight: 0.01
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 6653008106145314280}
+  m_Enabled: 1
+--- !u!1 &7034337158309065001
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6521015572901400159}
+  - component: {fileID: 5912081583192618783}
+  - component: {fileID: 6040798325075547899}
+  m_Layer: 0
+  m_Name: Bosje1_LOD0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6521015572901400159
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7034337158309065001}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.000010835007, y: 0.021576397, z: -0.00029126182}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 497577060887513344}
-  m_RootOrder: 1
+  m_Father: {fileID: 4976341831805153237}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &7307977281145480260
+--- !u!33 &5912081583192618783
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9012752298886999409}
-  m_Mesh: {fileID: -484983114075921175, guid: 08b172d0d9033b04485fca39c8a504fb, type: 3}
---- !u!23 &2286703447143682877
+  m_GameObject: {fileID: 7034337158309065001}
+  m_Mesh: {fileID: 7834463037359770548, guid: 08b172d0d9033b04485fca39c8a504fb, type: 3}
+--- !u!23 &6040798325075547899
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9012752298886999409}
+  m_GameObject: {fileID: 7034337158309065001}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -197,7 +197,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e3ffd0257ee08d14da432a8be086e372, type: 2}
+  - {fileID: 2100000, guid: 09a38276e04f8924db27838850175217, type: 2}
   - {fileID: 2100000, guid: 818bb4782329eac41ab05526ed1c172d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
