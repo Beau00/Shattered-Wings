@@ -17,19 +17,13 @@ public class ThirdPersonMov : MonoBehaviour
     void Start()
     {
         buncaAnimator = GetComponent<Animator>();
+
     }
 
     private void FixedUpdate()
     {
         
-        if (isGrounded)
-        {
-            verticalVelosity = 0;
-        }
-        else
-        {
-            verticalVelosity = -1;
-        }
+       
         if (moveVector.x.Equals(Vector3.zero.x) && moveVector.z.Equals(Vector3.zero.z))
         {   
             //idle
@@ -71,12 +65,12 @@ public class ThirdPersonMov : MonoBehaviour
             transform.position += moveDir.normalized * speed * Time.deltaTime;
         }
         moveVector = new Vector3(direction.x, verticalVelosity, direction.z);
-        if(PickUp.heldItem != null)
-        {
-            Vector3 pos = PickUp.heldItem.transform.position;
-            pos = new Vector3(pos.x, pos.y + verticalVelosity, pos.z);
-            PickUp.heldItem.transform.position = pos;
-            transform.position += moveVector;
-        }
+        //if(PickUp.heldItem != null)
+        //{
+        //    Vector3 pos = PickUp.heldItem.transform.position;
+        //    pos = new Vector3(pos.x, pos.y + verticalVelosity, pos.z);
+        //    PickUp.heldItem.transform.position = pos;
+        //    transform.position += moveVector;
+        //}
     }
 }

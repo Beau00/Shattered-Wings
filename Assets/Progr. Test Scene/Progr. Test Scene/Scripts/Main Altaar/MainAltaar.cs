@@ -8,10 +8,10 @@ public class MainAltaar : MonoBehaviour
     public Transform altaar1pos, altaar2pos, altaar3pos;
     public bool axeAdd = false, bookAdd = false, skullAdd = false;
     public bool oneInPos = false, twoInPos = false, threeInPos = false;
-    public ParticleSystem biem;
+ 
     private void Start()
     {
-        biem.IsAlive(false);
+
     }
 
     void Update()
@@ -49,7 +49,7 @@ public class MainAltaar : MonoBehaviour
         {
             //play animation, lighting effect and beam.
             Debug.Log("Main Altaar Finished");
-            biem.IsAlive(true);
+            
         }
     }
 }
