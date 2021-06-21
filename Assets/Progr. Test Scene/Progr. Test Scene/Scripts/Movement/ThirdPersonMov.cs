@@ -35,15 +35,17 @@ public class ThirdPersonMov : MonoBehaviour
             //run       
             Move(9f);
             buncaAnimator.SetFloat("Speed", 1f, 0.1f, Time.deltaTime);
+            Gravity();
         }
         else
         {  
             //walk
             Move(1.8f);
             buncaAnimator.SetFloat("Speed", 0.5f, 0.1f, Time.deltaTime);
+            Gravity();
         }
-       
-        transform.position += new Vector3(0, -1f * Time.deltaTime, 0);
+
+
     }
 
     private void Move(float speed)
@@ -72,5 +74,10 @@ public class ThirdPersonMov : MonoBehaviour
         //    PickUp.heldItem.transform.position = pos;
         //    transform.position += moveVector;
         //}
+    }
+
+    private void Gravity()
+    {
+        transform.position += new Vector3(0, -1f * Time.deltaTime, 0);
     }
 }

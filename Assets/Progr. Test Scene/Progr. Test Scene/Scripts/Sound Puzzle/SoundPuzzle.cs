@@ -5,17 +5,18 @@ using UnityEngine;
 public class SoundPuzzle : MonoBehaviour
 {
     public AudioSource lower, low, high, higher;
-
+    public AudioSource click;
     public Transform doorOneCollider, doorTwoCollider, doorThreeCollider, doorFourCollider;
 
     public Animator door1, door2, door3, door4;
-    public Animation d1, d2, d3, d4;
-
+   
+    public GameObject bookThing;
+    public Transform bookThingpos;
     //public GameObject smollDoorOne, smollDoorTwo, smollDoorThree, smollDoorFour;
     public bool smolldoorOpenOne = false, smolldoorOpenTwo = false, smolldoorOpenThree = false, smolldoorOpenFour = false;
 
     public float doorRotation;
-    public GameObject trofeeSoundPuzzle;
+    public GameObject book;
 
     public GameObject player;
     public float delay;
@@ -30,10 +31,13 @@ public class SoundPuzzle : MonoBehaviour
         door3.SetBool("C3", true);
         door4.SetBool("C4", true);
 
+        book.SetActive(false);
+
         lower.Stop();
         low.Stop();
         high.Stop();
         higher.Stop();
+        click.Stop();
     }
 
     void Update()
@@ -41,7 +45,8 @@ public class SoundPuzzle : MonoBehaviour
         Collider[] collidersOne = Physics.OverlapSphere(doorOneCollider.transform.position, 0.5f);
         foreach (Collider collider1 in collidersOne)
         {
-            if (collider1.transform.name == player.transform.name && Input.GetButtonDown("E"))
+            bool nameCheck = collider1.transform.name == player.transform.name;
+            if (nameCheck && Input.GetButtonDown("E") && Time.time - delay > 0.5f)
             {
                 lower.PlayDelayed(1.2f);
                 smolldoorOpenOne = true;
@@ -51,7 +56,7 @@ public class SoundPuzzle : MonoBehaviour
                 door1.SetBool("OpenClose", false);
 
             }
-            else if (smolldoorOpenOne = true && Input.GetButtonDown("F"))
+            else if (nameCheck && smolldoorOpenOne == true && Input.GetButtonDown("F") && Time.time - delay > 0.5f)
             {
 
                 smolldoorOpenOne = false;
@@ -68,7 +73,8 @@ public class SoundPuzzle : MonoBehaviour
         Collider[] collidersTwo = Physics.OverlapSphere(doorTwoCollider.transform.position, 0.5f);
         foreach (Collider collider2 in collidersTwo)
         {
-            if (collider2.transform.name == player.transform.name && Input.GetButtonDown("E"))
+            bool nameCheck = collider2.transform.name == player.transform.name;
+            if (nameCheck && Input.GetButtonDown("E") && Time.time - delay > 0.5f)
             {
                 low.PlayDelayed(1.2f);
                 smolldoorOpenTwo = true;
@@ -77,7 +83,7 @@ public class SoundPuzzle : MonoBehaviour
                 door2.SetBool("DoorCloseOpen", true);
                 door2.SetBool("DoorClose", false);
             }
-            else if (smolldoorOpenTwo = true && Input.GetButtonDown("F"))
+            else if (nameCheck && smolldoorOpenTwo == true && Input.GetButtonDown("F") && Time.time - delay > 0.5f)
             {
 
                 smolldoorOpenTwo = false;
@@ -94,8 +100,8 @@ public class SoundPuzzle : MonoBehaviour
         Collider[] collidersThree = Physics.OverlapSphere(doorThreeCollider.transform.position, 0.5f);
         foreach (Collider collider3 in collidersThree)
         {
-
-            if (collider3.transform.name == player.transform.name && Input.GetButtonDown("E"))
+            bool nameCheck = collider3.transform.name == player.transform.name;
+            if (nameCheck && Input.GetButtonDown("E") && Time.time - delay > 0.5f)
             {
                 high.PlayDelayed(1.2f);
                 smolldoorOpenThree = true;
@@ -104,7 +110,7 @@ public class SoundPuzzle : MonoBehaviour
                 door3.SetBool("CloseD", false);
                 door3.SetBool("CloseDOpenD", true);
             }
-            else if (smolldoorOpenThree = true && Input.GetButtonDown("F"))
+            else if (nameCheck && smolldoorOpenThree == true && Input.GetButtonDown("F") && Time.time - delay > 0.5f)
             {
 
                 smolldoorOpenThree = false;
@@ -121,8 +127,8 @@ public class SoundPuzzle : MonoBehaviour
         Collider[] collidersFour = Physics.OverlapSphere(doorFourCollider.transform.position, 0.5f);
         foreach (Collider collider4 in collidersFour)
         {
-
-            if (collider4.transform.name == player.transform.name && Input.GetButtonDown("E"))
+            bool nameCheck = collider4.transform.name == player.transform.name;
+            if (nameCheck && Input.GetButtonDown("E") && Time.time - delay > 0.5f)
             {
                 higher.PlayDelayed(1.2f);
                 smolldoorOpenFour = true;
@@ -131,7 +137,7 @@ public class SoundPuzzle : MonoBehaviour
                 door4.SetBool("OpenToClose", false);
                 door4.SetBool("CloseToOpen", true);
             }
-            else if (smolldoorOpenFour = true && Input.GetButtonDown("F"))
+            else if (nameCheck && smolldoorOpenFour == true && Input.GetButtonDown("F") && Time.time - delay > 0.5f)
             {
 
                 smolldoorOpenFour = false;
@@ -169,8 +175,21 @@ public class SoundPuzzle : MonoBehaviour
             lower.Stop();
         }
 
+        IEnumerator DelayedBookPosition()
+        {
 
+            yield return new WaitForSeconds(1f);
+            click.PlayDelayed(1.2f);
+            bookThing.transform.position = bookThingpos.position;
+            book.SetActive(true);
+        }
 
+        if (smolldoorOpenFour && smolldoorOpenOne)
+        {
+            Debug.Log("LEZZ GOOOOOOO");
+            StartCoroutine(DelayedBookPosition());
+           
+        }
 
     }
 }
