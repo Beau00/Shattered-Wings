@@ -6761,7 +6761,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 572663407}
-  m_LocalRotation: {x: 0.1721872, y: -0.000000033898782, z: 0.000000005925437, w: 0.98506427}
+  m_LocalRotation: {x: 0.1721872, y: 0.000000033898782, z: -0.000000005925437, w: 0.98506427}
   m_LocalPosition: {x: -1.0712919, y: 7.16, z: -14.304329}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -7433,6 +7433,7 @@ GameObject:
   - component: {fileID: 930787335}
   - component: {fileID: 930787334}
   - component: {fileID: 930787333}
+  - component: {fileID: 930787336}
   m_Layer: 0
   m_Name: Third person cam
   m_TagString: Untagged
@@ -7570,6 +7571,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &930787336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930787332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e501d18bb52cf8c40b1853ca4904654f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CollideAgainst:
+    serializedVersion: 2
+    m_Bits: 1
+  m_IgnoreTag: Player
+  m_TransparentLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_MinimumDistanceFromTarget: 0.1
+  m_AvoidObstacles: 1
+  m_DistanceLimit: 0
+  m_MinimumOcclusionTime: 0
+  m_CameraRadius: 0.1
+  m_Strategy: 0
+  m_MaximumEffort: 4
+  m_SmoothingTime: 0
+  m_Damping: 0
+  m_DampingWhenOccluded: 0
+  m_OptimalTargetDistance: 0
 --- !u!1 &940643154
 GameObject:
   m_ObjectHideFlags: 0
@@ -8270,6 +8301,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bunca
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 29d07a27c5fac13418109b89d8772cf7, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 2030939775241739953, guid: 29d07a27c5fac13418109b89d8772cf7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -8346,8 +8381,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.35621873, y: 0.4822277, z: 1.3579762}
-  m_Center: {x: -0.0036681176, y: 0.25888616, z: -0.35453054}
+  m_Size: {x: 0.13, y: 0.101075746, z: 0.8662546}
+  m_Center: {x: 0, y: 0.18625183, z: -0.7091781}
 --- !u!95 &1086302842
 Animator:
   serializedVersion: 3
@@ -8383,6 +8418,34 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!136 &1086302844
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086302838}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.08947749
+  m_Height: 0.17895499
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.2976659, z: 0.27947757}
+--- !u!136 &1086302845
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086302838}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.19
+  m_Height: 0.39861512
+  m_Direction: 1
+  m_Center: {x: -0.04084165, y: 0.19089139, z: 0}
 --- !u!1 &1088932944
 GameObject:
   m_ObjectHideFlags: 0
@@ -11417,7 +11480,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1776286120}
-  m_LocalRotation: {x: 0.17218721, y: -0.000000016949391, z: 0.0000000029627187, w: 0.98506427}
+  m_LocalRotation: {x: 0.17218721, y: 0.000000016949391, z: -0.0000000029627187, w: 0.98506427}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -12809,7 +12872,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2016585481}
-  m_LocalRotation: {x: 0.19578801, y: -1e-45, z: -0, w: 0.98064625}
+  m_LocalRotation: {x: 0.19578801, y: -0, z: -0, w: 0.98064625}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
