@@ -30,7 +30,7 @@ public class SwordSystem : MonoBehaviour
         foreach (Collider collider in colliders)
         {
 
-            if (collider.transform.name.ToString() == "sword1" )
+            if (collider.transform.name.ToString() == "Sword1" )
             {
                 Debug.Log("sword1");
                 if (sword1 != PickUp.heldItem)
@@ -39,7 +39,7 @@ public class SwordSystem : MonoBehaviour
                     swordAdded = true;
                 }
             }
-            if (collider.transform.name.ToString() == "sword2")
+            if (collider.transform.name.ToString() == "Sword2")
             {
                 Debug.Log("sword2");
                 if (sword2 != PickUp.heldItem)
@@ -48,7 +48,7 @@ public class SwordSystem : MonoBehaviour
                     swordtwoAdded = true;
                 }
             }
-            if (collider.transform.name.ToString() == "sword3" )
+            if (collider.transform.name.ToString() == "Sword3" )
             {
                 Debug.Log("sword3");
                 if (sword3 != PickUp.heldItem)
