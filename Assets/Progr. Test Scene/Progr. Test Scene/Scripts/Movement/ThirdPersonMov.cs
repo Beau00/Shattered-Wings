@@ -20,7 +20,7 @@ public class ThirdPersonMov : MonoBehaviour
 
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         
        
