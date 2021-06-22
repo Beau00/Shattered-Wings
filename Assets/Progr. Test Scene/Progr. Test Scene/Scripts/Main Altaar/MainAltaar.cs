@@ -8,16 +8,17 @@ public class MainAltaar : MonoBehaviour
     public Transform altaar1pos, altaar2pos, altaar3pos;
     public bool axeAdd = false, bookAdd = false, skullAdd = false;
     public bool oneInPos = false, twoInPos = false, threeInPos = false;
+    public GameObject biem;
  
     private void Start()
     {
-
+        biem.SetActive(false);
     }
 
     void Update()
     {
         // same sysyem as altaar1 
-        Collider[] colliders = Physics.OverlapSphere(new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 1f, gameObject.transform.position.z), 2f);
+        Collider[] colliders = Physics.OverlapSphere(new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 1f, gameObject.transform.position.z), 3f);
         foreach (Collider collider in colliders)
         {
             if (collider.transform.name.ToString() == "FullAxe" || axeAdd)
@@ -49,7 +50,15 @@ public class MainAltaar : MonoBehaviour
         {
             //play animation, lighting effect and beam.
             Debug.Log("Main Altaar Finished");
+
             
         }
+    }
+
+
+    IEnumerator BiemActive()
+    {
+        yield return new WaitForSeconds(1f);
+        biem.SetActive(true);
     }
 }

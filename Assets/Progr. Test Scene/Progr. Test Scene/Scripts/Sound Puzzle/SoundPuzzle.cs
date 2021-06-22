@@ -42,7 +42,7 @@ public class SoundPuzzle : MonoBehaviour
 
     void Update()
     {
-        Collider[] collidersOne = Physics.OverlapSphere(doorOneCollider.transform.position, 0.5f);
+        Collider[] collidersOne = Physics.OverlapSphere(doorOneCollider.transform.position, 1);
         foreach (Collider collider1 in collidersOne)
         {
             bool nameCheck = collider1.transform.name == player.transform.name;
@@ -70,7 +70,7 @@ public class SoundPuzzle : MonoBehaviour
             }
         }
 
-        Collider[] collidersTwo = Physics.OverlapSphere(doorTwoCollider.transform.position, 0.5f);
+        Collider[] collidersTwo = Physics.OverlapSphere(doorTwoCollider.transform.position, 1);
         foreach (Collider collider2 in collidersTwo)
         {
             bool nameCheck = collider2.transform.name == player.transform.name;
@@ -97,7 +97,7 @@ public class SoundPuzzle : MonoBehaviour
             }
         }
 
-        Collider[] collidersThree = Physics.OverlapSphere(doorThreeCollider.transform.position, 0.5f);
+        Collider[] collidersThree = Physics.OverlapSphere(doorThreeCollider.transform.position, 1);
         foreach (Collider collider3 in collidersThree)
         {
             bool nameCheck = collider3.transform.name == player.transform.name;
@@ -124,7 +124,7 @@ public class SoundPuzzle : MonoBehaviour
             }
         }
 
-        Collider[] collidersFour = Physics.OverlapSphere(doorFourCollider.transform.position, 0.5f);
+        Collider[] collidersFour = Physics.OverlapSphere(doorFourCollider.transform.position, 1);
         foreach (Collider collider4 in collidersFour)
         {
             bool nameCheck = collider4.transform.name == player.transform.name;
