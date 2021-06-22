@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7963816568708331951}
   - component: {fileID: 6688770500459214037}
   - component: {fileID: 1876256371420278717}
+  - component: {fileID: 3299702938664911432}
   m_Layer: 0
   m_Name: Stone3_LOD0
   m_TagString: Untagged
@@ -81,3 +82,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3299702938664911432
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8224918445469084428}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7986880725877668261, guid: 77f22ea815b527b4fa42dc9163c3b25d, type: 3}

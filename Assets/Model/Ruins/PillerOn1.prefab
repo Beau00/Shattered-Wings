@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7861520380826041867}
   - component: {fileID: 2480078023185084436}
   - component: {fileID: 2505466367090130632}
+  - component: {fileID: 3295239023055490128}
   m_Layer: 0
   m_Name: PillerOn1
   m_TagString: Untagged
@@ -81,3 +82,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &3295239023055490128
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559836616704236705}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.4243406
+  m_Height: 2.6974132
+  m_Direction: 1
+  m_Center: {x: -0.00000013754918, y: 0.9007058, z: -0.000000045849728}

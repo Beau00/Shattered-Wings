@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2660075777917605207}
   - component: {fileID: 7873868943857478233}
   - component: {fileID: 7589417672741431899}
+  - component: {fileID: 1706651326847633299}
   m_Layer: 0
   m_Name: LongStoneBrick
   m_TagString: Untagged
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1706651326847633299
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7761776623505264575}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.1720042, y: 1.0387268, z: 1.3221483}
+  m_Center: {x: 0.00000023841858, y: 0, z: 0.00000047683716}
