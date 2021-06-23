@@ -14,6 +14,8 @@ public class SwordSystem : MonoBehaviour
     public Animator altaarThree, swordOne, swordTwo, swordThree;
     public GameObject skull;
     public GameObject stepCollider;
+    public GameObject mt;
+    bool playSound = true;
 
     private void Start()
     {
@@ -38,8 +40,8 @@ public class SwordSystem : MonoBehaviour
                 Debug.Log("sword1");
                 if (sword1 != PickUp.heldItem)
                 {
-                    swordIn1.PlayDelayed(0.3f);
-                    sword1.tag = null;
+                    swordIn1.PlayDelayed(0.8f);
+                    sword1.tag = mt.tag;
                     swordAdded = true;
                 }
             }
@@ -48,9 +50,10 @@ public class SwordSystem : MonoBehaviour
                 Debug.Log("sword2");
                 if (sword2 != PickUp.heldItem)
                 {
-                    sword2.tag = null;
+                    swordIn2.PlayDelayed(0.8f);
+                    sword2.tag = mt.tag;
                     swordtwoAdded = true;
-                    swordIn2.PlayDelayed(0.3f);
+                    
                 }
             }
             if (collider.transform.name.ToString() == "Sword3" )
@@ -58,8 +61,8 @@ public class SwordSystem : MonoBehaviour
                 Debug.Log("sword3");
                 if (sword3 != PickUp.heldItem)
                 {
-                    swordIn3.PlayDelayed(0.3f);
-                    sword3.tag = null;
+                    swordIn3.PlayDelayed(0.8f);
+                    sword3.tag = mt.tag;
                     swordthreeadded = true;
                 }
             }
@@ -95,10 +98,17 @@ public class SwordSystem : MonoBehaviour
           
             three = true;
         }
-        if (one && two && three)
+        if (one && two && three && playSound)
         {
+            playSound = false;
+            
+            Debug.Log("bitchezzz");
             skull.SetActive(true);
             StartCoroutine(DelayedAnimation());       
+        }
+        else if ((!one || !two || !three) && !playSound)
+        {
+            playSound = true;
         }
 
        
@@ -108,7 +118,8 @@ public class SwordSystem : MonoBehaviour
             graveOpen.Play();
             stepCollider.SetActive(true);
             altaarThree.SetBool("GraveOpen", true);
-           
+            
+
         }
     }
 }

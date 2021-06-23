@@ -8,12 +8,17 @@ public class AxeSystem : MonoBehaviour
     public GameObject axeHead1, axeHead2, axeHandle;
     public Transform axeHeadPositionOne, axeHeadPositionTwo, axeHandlePosition;
     public bool axeHead1Added = false, axeHead2Added = false, axeHandleAdded = false;
-    public ParticleSystem test;
+
+    public GameObject particle;
+
     public GameObject fullAxe;
     public AudioSource axeFixy;
+    public GameObject mt;
+    bool playSound = true;
 
     private void Start()
     {
+        particle.SetActive(false);
         fullAxe.SetActive(false);
         axeFixy.Stop();
     }
@@ -28,7 +33,7 @@ public class AxeSystem : MonoBehaviour
                     Debug.Log("axe head one on position");
                     if (axeHead1 != PickUp.heldItem)
                     {
-                        axeHead1.tag = null;
+                        axeHead1.tag = mt.tag;
                         axeHead1Added = true;
                     }
                 }
@@ -38,7 +43,7 @@ public class AxeSystem : MonoBehaviour
                     Debug.Log("axe head two on position");
                     if (axeHead2 != PickUp.heldItem)
                     {
-                        axeHead2.tag = null;
+                        axeHead2.tag = mt.tag;
                         axeHead2Added = true;
                     }
                 }
@@ -48,20 +53,27 @@ public class AxeSystem : MonoBehaviour
                     Debug.Log("axe handle on position");
                     if (axeHandle != PickUp.heldItem)
                     {
-                        axeHandle.tag = null;
+                        axeHandle.tag = mt.tag;
                         axeHandleAdded = true;
                     }
                 }           
         }
 
-        if (axeHead1Added && axeHead2Added && axeHandleAdded)
+        if (axeHead1Added && axeHead2Added && axeHandleAdded && playSound)
         {
+            StartCoroutine(particleDestroy());
+            
             axeFixy.Play();
             fullAxe.SetActive(true);
             axeHandle.SetActive(false);
             axeHead1.SetActive(false);
             axeHead2.SetActive(false);
+            playSound = false;
             
+            
+        }else if((!axeHandleAdded || !axeHead2Added || !axeHead1Added) && !playSound)
+        {
+            playSound = true;
         }
         if (axeHead1Added)
         {
@@ -77,6 +89,13 @@ public class AxeSystem : MonoBehaviour
         {
             axeHandle.transform.position = axeHandlePosition.position;
             axeHandle.transform.rotation = axeHeadPositionOne.rotation;
+        }
+
+        IEnumerator particleDestroy()
+        {
+            particle.SetActive(true);
+            yield return new WaitForSeconds(2f);
+            Destroy(particle);
         }
     }
 }

@@ -10,9 +10,13 @@ public class PickUp : MonoBehaviour
     public static GameObject heldItem;
     public bool helditembool;
     public GameObject pickUpPosition;
-
+    public AudioSource pickup, pickdown;
     public float delay;
-
+    private void Start()
+    {
+        pickup.Stop();
+        pickdown.Stop();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -47,7 +51,7 @@ public class PickUp : MonoBehaviour
                 }
                 helditembool = true;
                 heldItem = hitCollider.gameObject;
-                
+                pickup.Play();
                 heldItem.transform.position = pickUpPosition.transform.position;
                 delay = Time.time;
                 
@@ -58,6 +62,7 @@ public class PickUp : MonoBehaviour
                 heldItem.GetComponent<Rigidbody>().useGravity = true;
                 heldItem = null; 
                 delay = Time.time;
+                pickdown.Play();
             }
 
         }

@@ -23,6 +23,8 @@ public class SoundPuzzle : MonoBehaviour
     public GameObject player;
     public float delay;
 
+    public bool playFinishSound = true;
+
     // animation add && main item systemm
 
     // Start is called before the first frame update
@@ -196,12 +198,18 @@ public class SoundPuzzle : MonoBehaviour
             book.SetActive(true);
         }
 
-        if (smolldoorOpenFour && smolldoorOpenOne)
+        if (smolldoorOpenFour && smolldoorOpenOne && playFinishSound)
         {
+            click.PlayDelayed(3f);
             Debug.Log("LEZZ GOOOOOOO");
             StartCoroutine(DelayedBookPosition());
-            click.Play();
+            playFinishSound = false;
 
+        }
+        else if ((!smolldoorOpenFour || !smolldoorOpenOne) && !playFinishSound)
+        {
+            playFinishSound = true;
+            Debug.Log("DONT GOOO");
         }
 
     }

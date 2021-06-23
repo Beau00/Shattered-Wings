@@ -10,6 +10,8 @@ public class MainAltaar : MonoBehaviour
     public bool oneInPos = false, twoInPos = false, threeInPos = false;
     public GameObject biem;
     public AudioSource biemzoom;
+    public GameObject mt;
+    bool playSound = true;
  
     private void Start()
     {
@@ -25,7 +27,7 @@ public class MainAltaar : MonoBehaviour
         {
             if (collider.transform.name.ToString() == "FullAxe" || axeAdd)
             {
-                altaar1.tag = null;
+                altaar1.tag = mt.tag;
                 altaar1.transform.position = altaar1pos.position;
                 altaar1.transform.rotation = altaar1pos.rotation;
                 oneInPos = true;
@@ -33,7 +35,7 @@ public class MainAltaar : MonoBehaviour
 
             if (collider.transform.name.ToString() == "Book" || bookAdd)
             {
-                altaar2.tag = null;
+                altaar2.tag = mt.tag;
                 altaar2.transform.position = altaar2pos.position;
                 altaar2.transform.rotation = altaar2pos.rotation;
                 twoInPos = true;
@@ -41,19 +43,31 @@ public class MainAltaar : MonoBehaviour
 
             if (collider.transform.name.ToString() == "Skull" || skullAdd)
             {
-                altaar3.tag = null;
+                altaar3.tag = mt.tag;
                 altaar3.transform.position = altaar3pos.position;
                 altaar3.transform.rotation = altaar3pos.rotation;
                 threeInPos = true;
             }
         }
 
-        if(oneInPos && twoInPos && threeInPos)
+        bool axeAdded = altaar1.transform.position.Equals(altaar1pos.position);
+        bool bookAdded = altaar2.transform.position.Equals(altaar2pos.position);
+        bool skullAdded = altaar3.transform.position.Equals(altaar3pos.position);
+        bool everythingAdded = axeAdded && bookAdded && skullAdded;
+        if (axeAdded)
         {
-            
+            Debug.Log("AXE ADDED IN ");
+        }
+        if(oneInPos && twoInPos && threeInPos && playSound /*&& everythingAdded*/)
+        {
+            playSound = false;
             Debug.Log("Main Altaar Finished");
             StartCoroutine(BiemActive());
             biemzoom.PlayDelayed(1);
+        }
+        else if((!oneInPos || !twoInPos || !threeInPos) && !playSound)
+        {
+            playSound = true;
         }
     }
 
