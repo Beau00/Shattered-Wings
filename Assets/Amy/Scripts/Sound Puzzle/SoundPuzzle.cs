@@ -6,6 +6,8 @@ public class SoundPuzzle : MonoBehaviour
 {
     public AudioSource lower, low, high, higher;
     public AudioSource click;
+    public AudioSource open;
+    public AudioSource close;
     public Transform doorOneCollider, doorTwoCollider, doorThreeCollider, doorFourCollider;
 
     public Animator door1, door2, door3, door4;
@@ -32,7 +34,8 @@ public class SoundPuzzle : MonoBehaviour
         door4.SetBool("C4", true);
 
         book.SetActive(false);
-
+        close.Stop();
+        open.Stop();
         lower.Stop();
         low.Stop();
         high.Stop();
@@ -54,7 +57,7 @@ public class SoundPuzzle : MonoBehaviour
                 door1.SetBool("Open", true);
                 door1.SetBool("CloseOpen", true);
                 door1.SetBool("OpenClose", false);
-
+                open.Play();
             }
             else if (nameCheck && smolldoorOpenOne == true && Input.GetButtonDown("F") && Time.time - delay > 0.5f)
             {
@@ -67,6 +70,8 @@ public class SoundPuzzle : MonoBehaviour
                 door1.SetBool("OpenClose", true);
                 door1.SetBool("CloseOpen", false);
                 door1.SetBool("Open", false);
+                close.Play();
+
             }
         }
 
@@ -82,6 +87,7 @@ public class SoundPuzzle : MonoBehaviour
                 door2.SetBool("DoorOpen", true);
                 door2.SetBool("DoorCloseOpen", true);
                 door2.SetBool("DoorClose", false);
+                open.Play();
             }
             else if (nameCheck && smolldoorOpenTwo == true && Input.GetButtonDown("F") && Time.time - delay > 0.5f)
             {
@@ -90,10 +96,11 @@ public class SoundPuzzle : MonoBehaviour
                 delay = Time.time;
 
                 StartCoroutine(DelayedSoundStopTwo());
-
+                
                 door2.SetBool("DoorClose", true);
                 door2.SetBool("DoorOpen", false);
                 door2.SetBool("DoorCloseOpen", false);
+                close.Play();
             }
         }
 
@@ -109,6 +116,7 @@ public class SoundPuzzle : MonoBehaviour
                 door3.SetBool("OpenD", true);
                 door3.SetBool("CloseD", false);
                 door3.SetBool("CloseDOpenD", true);
+                open.Play();
             }
             else if (nameCheck && smolldoorOpenThree == true && Input.GetButtonDown("F") && Time.time - delay > 0.5f)
             {
@@ -121,6 +129,7 @@ public class SoundPuzzle : MonoBehaviour
                 door3.SetBool("CloseD", true);
                 door3.SetBool("OpenD", false);
                 door3.SetBool("CloseDOpenD", false);
+                close.Play();
             }
         }
 
@@ -136,6 +145,7 @@ public class SoundPuzzle : MonoBehaviour
                 door4.SetBool("OpenTrue", true);
                 door4.SetBool("OpenToClose", false);
                 door4.SetBool("CloseToOpen", true);
+                open.Play();
             }
             else if (nameCheck && smolldoorOpenFour == true && Input.GetButtonDown("F") && Time.time - delay > 0.5f)
             {
@@ -148,6 +158,7 @@ public class SoundPuzzle : MonoBehaviour
                 door4.SetBool("OpenToClose", true);
                 door4.SetBool("OpenTrue", false);
                 door4.SetBool("CloseToOpen", false);
+                close.Play();
 
 
             }
@@ -158,6 +169,7 @@ public class SoundPuzzle : MonoBehaviour
         {
             yield return new WaitForSeconds(1.2f);
             higher.Stop();
+            
         }
         IEnumerator DelayedSoundStopThree()
         {
@@ -179,7 +191,7 @@ public class SoundPuzzle : MonoBehaviour
         {
 
             yield return new WaitForSeconds(1f);
-            click.PlayDelayed(1.2f);
+            
             bookThing.transform.position = bookThingpos.position;
             book.SetActive(true);
         }
@@ -188,7 +200,8 @@ public class SoundPuzzle : MonoBehaviour
         {
             Debug.Log("LEZZ GOOOOOOO");
             StartCoroutine(DelayedBookPosition());
-           
+            click.Play();
+
         }
 
     }

@@ -9,10 +9,12 @@ public class MainAltaar : MonoBehaviour
     public bool axeAdd = false, bookAdd = false, skullAdd = false;
     public bool oneInPos = false, twoInPos = false, threeInPos = false;
     public GameObject biem;
+    public AudioSource biemzoom;
  
     private void Start()
     {
         biem.SetActive(false);
+        biemzoom.Stop();
     }
 
     void Update()
@@ -48,10 +50,10 @@ public class MainAltaar : MonoBehaviour
 
         if(oneInPos && twoInPos && threeInPos)
         {
-            //play animation, lighting effect and beam.
-            Debug.Log("Main Altaar Finished");
-
             
+            Debug.Log("Main Altaar Finished");
+            StartCoroutine(BiemActive());
+            biemzoom.PlayDelayed(1);
         }
     }
 
@@ -60,5 +62,7 @@ public class MainAltaar : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         biem.SetActive(true);
+      
+        // als zwarte scherm komt moet alle audio uit. 
     }
 }

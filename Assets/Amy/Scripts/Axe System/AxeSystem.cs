@@ -10,10 +10,12 @@ public class AxeSystem : MonoBehaviour
     public bool axeHead1Added = false, axeHead2Added = false, axeHandleAdded = false;
     public ParticleSystem test;
     public GameObject fullAxe;
+    public AudioSource axeFixy;
 
     private void Start()
     {
         fullAxe.SetActive(false);
+        axeFixy.Stop();
     }
 
     private void Update()
@@ -53,11 +55,13 @@ public class AxeSystem : MonoBehaviour
         }
 
         if (axeHead1Added && axeHead2Added && axeHandleAdded)
-        { 
+        {
+            axeFixy.Play();
             fullAxe.SetActive(true);
             axeHandle.SetActive(false);
             axeHead1.SetActive(false);
             axeHead2.SetActive(false);
+            
         }
         if (axeHead1Added)
         {

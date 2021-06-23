@@ -7,21 +7,25 @@ public class SwordSystem : MonoBehaviour
     public static int count = 0;
     public GameObject sword1, sword2, sword3;
     public Transform swordPos1, swordPos2, swordPos3;
-    public bool swordAdded = false, swordtwoAdded = false, swordthreeadded = false;
+    bool swordAdded = false, swordtwoAdded = false, swordthreeadded = false;
     public GameObject animSwordOne, animSwordTwo, animSwordThree;
     bool one = false, two = false, three = false;
-
-
+    public AudioSource graveOpen, swordIn1, swordIn2, swordIn3;
     public Animator altaarThree, swordOne, swordTwo, swordThree;
-
     public GameObject skull;
+    public GameObject stepCollider;
 
     private void Start()
     {
+        graveOpen.Stop();
         skull.SetActive(false);
         animSwordOne.SetActive(false);
         animSwordTwo.SetActive(false);
         animSwordThree.SetActive(false);
+        swordIn1.Stop();
+        swordIn2.Stop();
+        swordIn3.Stop();
+        stepCollider.SetActive(false);
     }
 
     private void Update()
@@ -29,12 +33,12 @@ public class SwordSystem : MonoBehaviour
         Collider[] colliders = Physics.OverlapSphere(new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), 3f);
         foreach (Collider collider in colliders)
         {
-
             if (collider.transform.name.ToString() == "Sword1" )
             {
                 Debug.Log("sword1");
                 if (sword1 != PickUp.heldItem)
                 {
+                    swordIn1.PlayDelayed(0.3f);
                     sword1.tag = null;
                     swordAdded = true;
                 }
@@ -46,6 +50,7 @@ public class SwordSystem : MonoBehaviour
                 {
                     sword2.tag = null;
                     swordtwoAdded = true;
+                    swordIn2.PlayDelayed(0.3f);
                 }
             }
             if (collider.transform.name.ToString() == "Sword3" )
@@ -53,21 +58,21 @@ public class SwordSystem : MonoBehaviour
                 Debug.Log("sword3");
                 if (sword3 != PickUp.heldItem)
                 {
+                    swordIn3.PlayDelayed(0.3f);
                     sword3.tag = null;
                     swordthreeadded = true;
                 }
             }
         }
-
-
       
         if (swordAdded)
         {
             sword1.transform.position = swordPos1.position;
             sword1.transform.rotation = swordPos1.rotation;
-           sword1.SetActive(false);
-           animSwordOne.SetActive(true);
-           swordOne.SetBool("SwordOneCheck", true);
+            sword1.SetActive(false);
+            animSwordOne.SetActive(true);
+            swordOne.SetBool("SwordOneCheck", true);
+           
             one = true;
         }
         if (swordtwoAdded)
@@ -77,6 +82,7 @@ public class SwordSystem : MonoBehaviour
             sword2.SetActive(false);
             animSwordTwo.SetActive(true);
             swordTwo.SetBool("SwordTwoCheck", true);
+            
             two = true;
         }
         if (swordthreeadded)
@@ -86,21 +92,23 @@ public class SwordSystem : MonoBehaviour
             sword3.SetActive(false);
             animSwordThree.SetActive(true);
             swordThree.SetBool("SwordThreeCheck", true);
+          
             three = true;
         }
         if (one && two && three)
         {
             skull.SetActive(true);
-            StartCoroutine(DelayedAnimation());
-            
-
-         
+            StartCoroutine(DelayedAnimation());       
         }
 
+       
         IEnumerator DelayedAnimation()
         {
             yield return new WaitForSeconds(5);
+            graveOpen.Play();
+            stepCollider.SetActive(true);
             altaarThree.SetBool("GraveOpen", true);
+           
         }
     }
 }
