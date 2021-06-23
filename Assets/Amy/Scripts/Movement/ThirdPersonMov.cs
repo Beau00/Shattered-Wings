@@ -13,6 +13,10 @@ public class ThirdPersonMov : MonoBehaviour
     float verticalVelosity;
     private Animator buncaAnimator;
     public AnimationCurve curve;
+    float targetAngle;
+
+    bool done = true;
+    bool changed = false;
 
     void Start()
     {
@@ -48,6 +52,52 @@ public class ThirdPersonMov : MonoBehaviour
 
     }
 
+    private void FixedUpdate()
+    {
+        if (moveVector.x.Equals(Vector3.zero.x) && moveVector.z.Equals(Vector3.zero.z))
+        {
+            //idle
+            SetRotation();
+        }
+        else if ((Input.GetButton("Left Shift") || Input.GetButtonDown("Left Shift")) && PickUp.heldItem == null)
+        {
+            //run       
+            SetRotation();
+        }
+        else
+        {
+            //walk
+            SetRotation();
+        }
+    }
+
+    private void SetRotation()
+    {
+        float hor = Input.GetAxisRaw("Horizontal");
+        float ver = Input.GetAxisRaw("Vertical");
+        Vector3 direction = new Vector3(hor, 0, ver).normalized;
+
+
+        if (direction.magnitude >= 0.1f)
+        {
+            if (targetAngle != (Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y))
+            {
+                changed = true;
+                StopAllCoroutines();
+            }
+            targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
+
+            if (done || changed)
+            {
+                changed = false;
+                done = false;
+                StartCoroutine(LerpRotation(Quaternion.Euler(0f, targetAngle, 0f), 0.25f));
+            }
+           
+        }
+        moveVector = new Vector3(direction.x, verticalVelosity, direction.z);
+    }
+
     private void Move(float speed)
     {
         
@@ -58,9 +108,11 @@ public class ThirdPersonMov : MonoBehaviour
 
         if (direction.magnitude >= 0.1f)
         {
-            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
-            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
-            transform.rotation = Quaternion.Euler(0f, angle, 0f);
+            
+            targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
+            //float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
+
+            
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
 
            
@@ -79,5 +131,21 @@ public class ThirdPersonMov : MonoBehaviour
     private void Gravity()
     {
         transform.position += new Vector3(0, -1f * Time.deltaTime, 0);
+    }
+
+    IEnumerator LerpRotation(Quaternion endRotation, float duration)
+    {
+        
+        float time = 0;
+        Quaternion startRotation = transform.rotation;
+        while(time < duration)
+        {
+           
+            transform.rotation = Quaternion.Lerp(startRotation, endRotation, time/duration);
+            time += Time.deltaTime;
+            yield return null;
+        }
+        transform.rotation = endRotation;
+        done = true;
     }
 }
