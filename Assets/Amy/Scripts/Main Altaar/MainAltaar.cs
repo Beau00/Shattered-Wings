@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MainAltaar : MonoBehaviour
@@ -54,29 +53,28 @@ public class MainAltaar : MonoBehaviour
         bool bookAdded = altaar2.transform.position.Equals(altaar2pos.position);
         bool skullAdded = altaar3.transform.position.Equals(altaar3pos.position);
         bool everythingAdded = axeAdded && bookAdded && skullAdded;
+
         if (axeAdded)
         {
             Debug.Log("AXE ADDED IN ");
         }
-        if(oneInPos && twoInPos && threeInPos && playSound /*&& everythingAdded*/)
+        if(oneInPos && twoInPos && threeInPos && playSound  /*everythingAdded*/)
         {
             playSound = false;
             Debug.Log("Main Altaar Finished");
             StartCoroutine(BiemActive());
-            biemzoom.PlayDelayed(1);
+            biemzoom.PlayDelayed(2);
         }
         else if((!oneInPos || !twoInPos || !threeInPos) && !playSound)
         {
             playSound = true;
         }
     }
-
-
+    
     IEnumerator BiemActive()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         biem.SetActive(true);
       
-        // als zwarte scherm komt moet alle audio uit. 
     }
 }
