@@ -23,7 +23,7 @@ public class Fadie : MonoBehaviour
     
     public void FadeIn()
     {
-        ade.CrossFadeAlpha(1, 1, false);
+        ade.CrossFadeAlpha(1, 1, true);
         StartCoroutine(Henk());
         
     }
