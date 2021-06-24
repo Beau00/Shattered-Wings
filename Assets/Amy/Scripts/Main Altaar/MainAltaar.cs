@@ -75,7 +75,7 @@ public class MainAltaar : MonoBehaviour
     
     IEnumerator BiemActive()
     {
-        yield return new WaitForSeconds(8f);
+        yield return new WaitForSeconds(12f);
         biem.SetActive(true);
         outroStart.Outro();
 

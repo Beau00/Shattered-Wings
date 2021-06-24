@@ -15,7 +15,7 @@ public class GameEnd : MonoBehaviour
     }
     IEnumerator FadeIn()
     {
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(3f);
         image.SetActive(true);
         ade.CrossFadeAlpha(1, 1, false);
         StartCoroutine(OutroStart());
