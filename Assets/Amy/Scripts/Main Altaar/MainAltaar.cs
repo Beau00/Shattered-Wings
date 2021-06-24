@@ -11,6 +11,8 @@ public class MainAltaar : MonoBehaviour
     public AudioSource biemzoom;
     public GameObject mt;
     bool playSound = true;
+
+    public GameEnd outroStart;
  
     private void Start()
     {
@@ -73,8 +75,9 @@ public class MainAltaar : MonoBehaviour
     
     IEnumerator BiemActive()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(8f);
         biem.SetActive(true);
-      
+        outroStart.Outro();
+
     }
 }

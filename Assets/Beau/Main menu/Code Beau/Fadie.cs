@@ -31,7 +31,7 @@ public class Fadie : MonoBehaviour
   
    IEnumerator Henk()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(3f);
 
         SceneManager.LoadScene(1);
 

@@ -1629,31 +1629,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 29d07a27c5fac13418109b89d8772cf7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.6597731
+      value: -0.4975513
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 29d07a27c5fac13418109b89d8772cf7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.14102437
+      value: -0.09093457
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 29d07a27c5fac13418109b89d8772cf7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.73790723
+      value: 0.86071587
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 29d07a27c5fac13418109b89d8772cf7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.01745472
+      value: 0.05780816
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 29d07a27c5fac13418109b89d8772cf7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 9.226
+      value: -0.517
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 29d07a27c5fac13418109b89d8772cf7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 262.503
+      value: 240.118
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 29d07a27c5fac13418109b89d8772cf7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -13.544
+      value: -12.361
       objectReference: {fileID: 0}
     - target: {fileID: -6373024877810494227, guid: 29d07a27c5fac13418109b89d8772cf7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3313,9 +3313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ade: {fileID: 649811940}
-  startEnd: 1
   image: {fileID: 649811938}
-  time: 0
 --- !u!1 &669281898
 GameObject:
   m_ObjectHideFlags: 0
@@ -3436,6 +3434,7 @@ GameObject:
   - component: {fileID: 694622866}
   - component: {fileID: 694622865}
   - component: {fileID: 694622864}
+  - component: {fileID: 694622868}
   m_Layer: 0
   m_Name: Cube
   m_TagString: pickupthing
@@ -3519,6 +3518,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 14.006, y: -35.214, z: -9.694}
+--- !u!114 &694622868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 694622863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d75fa459cb8bea41bab5a11f8abf47f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ade: {fileID: 649811940}
 --- !u!1 &697470529
 GameObject:
   m_ObjectHideFlags: 0

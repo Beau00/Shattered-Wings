@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Beau/Main menu/main.unity
     guid: 23f09b8f48204c74ba2f6ad50bf336ff
   - enabled: 1
+    path: Assets/Warner/Intro.unity
+    guid: 663d4b67dfe57344cb68fd3e53452e8e
+  - enabled: 1
     path: Assets/Beau/Terrain Test/TerrainTest.unity
     guid: bf0695bc917091443aff45b443fb4c87
+  - enabled: 1
+    path: Assets/Warner/Outro.unity
+    guid: fcc3f7fd440e03744aeeca2438c70c67
   m_configObjects: {}
