@@ -1,8 +1,8 @@
 Shader "Custom/SurfaceOutline"
 {
     Properties{
-              _Color("Main Color", Color) = (1,1,1,0.5)
-              _Outline("Outline Color", Color) = (0,0,0,1)
+              _Color("Main Color", Color) = (1,1,1)
+              _Outline("Outline Color", Color) = (0,0,0)
               _MainTex("Albedo (RGB)", 2D) = "white" {}
               _Glossiness("Smoothness", Range(0,1)) = 0.5
               _Size("Outline Thickness", Float) = 1.5
