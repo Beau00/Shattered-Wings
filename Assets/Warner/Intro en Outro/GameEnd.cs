@@ -23,7 +23,8 @@ public class GameEnd : MonoBehaviour
 
     IEnumerator OutroStart()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(3);
+        Cursor.lockState = CursorLockMode.None;
     }
 }
