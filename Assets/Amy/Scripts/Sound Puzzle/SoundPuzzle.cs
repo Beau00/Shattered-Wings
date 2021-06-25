@@ -198,12 +198,41 @@ public class SoundPuzzle : MonoBehaviour
             book.SetActive(true);
         }
 
+        IEnumerator EndingClose()
+        {
+            yield return new WaitForSeconds(4);
+           
+
+            door4.SetBool("OpenToClose", true);
+            door4.SetBool("OpenTrue", false);
+            door4.SetBool("CloseToOpen", false);
+
+            door1.SetBool("OpenClose", true);
+            door1.SetBool("CloseOpen", false);
+            door1.SetBool("Open", false);
+
+            smolldoorOpenFour = false;
+            smolldoorOpenOne = false;
+
+            yield return new WaitForSeconds(0.4f);
+
+            close.Stop();
+            open.Stop();
+            lower.Stop();
+            low.Stop();
+            high.Stop();
+            higher.Stop();
+            click.Stop();
+        }
+
         if (smolldoorOpenFour && smolldoorOpenOne && playFinishSound)
         {
             click.PlayDelayed(3f);
             Debug.Log("LEZZ GOOOOOOO");
             StartCoroutine(DelayedBookPosition());
+            StopCoroutine(DelayedBookPosition());
             playFinishSound = false;
+            StartCoroutine(EndingClose());
 
         }
         else if ((!smolldoorOpenFour || !smolldoorOpenOne) && !playFinishSound)
